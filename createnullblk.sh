@@ -1,3 +1,17 @@
+#!/bin/bash
+
+# This script is adapted from the Zoned Storage Documentation at 
+
+if [ $# != 2 ]; then
+    echo "Usage: $0 <sect size (B)> <total size (MB)>"
+    exit 1
+fi
+
+scriptdir=$(cd $(dirname "$0") && pwd)
+
+modprobe null_blk nr_devices=0 || return $?
+
+function create_nullb()
 {
     local nid=0
     local bs=$1

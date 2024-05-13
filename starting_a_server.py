@@ -27,7 +27,11 @@ def execute_and_detach(cmd):
     return child
 
 def prepare_storage():
-    nullblk_code, nullblk = execute_and_wait('./createnullblk.sh 512 4096 {STORAGE_LATENCY}')
+    chmod_code, _ = execute_and_wait('sudo chmod +x createnullblk.sh')
+    if chmod_code != 0:
+        raise Exception('Could not chmod nullblk')
+
+    nullblk_code, nullblk = execute_and_wait('sudo ./createnullblk.sh 512 4096 {STORAGE_LATENCY}')
     if nullblk_code != 0:
         raise Exception('Could not create nullblock space')
     
