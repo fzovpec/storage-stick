@@ -27,11 +27,11 @@ def execute_and_detach(cmd):
     return child
 
 def prepare_storage():
-    chmod_code, _ = execute_and_wait('sudo chmod +x createnullblk.sh')
+    chmod_code, _ = execute_and_wait(f'sudo chmod +x createnullblk.sh')
     if chmod_code != 0:
         raise Exception('Could not chmod nullblk')
 
-    nullblk_code, nullblk = execute_and_wait('sudo ./createnullblk.sh 512 4096 {STORAGE_LATENCY}')
+    nullblk_code, nullblk = execute_and_wait(f'sudo ./createnullblk.sh 512 4096 {STORAGE_LATENCY}')
     if nullblk_code != 0:
         raise Exception('Could not create nullblock space')
     
@@ -45,7 +45,7 @@ def prepare_storage():
     if mkdir_code != 0:
         raise Exception('Could not make /mnt/ext4 folder')
     
-    mount_code, _ = execute_and_wait('sudo mount {dev_path} /mnt/ext4')
+    mount_code, _ = execute_and_wait(f'sudo mount {dev_path} /mnt/ext4')
     if mount_code != 0:
         raise Exception('Could not mount folder')
 

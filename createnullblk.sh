@@ -43,5 +43,5 @@ function create_nullb()
     echo "$nid"
 }
 
-nulldev=$(create_nullb $1 $2)
+nulldev=$(create_nullb $1 $2 $3)
 echo "nullb$nulldev"
