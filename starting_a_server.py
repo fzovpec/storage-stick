@@ -2,13 +2,15 @@ import pexpect
 import os
 import time
 import pandas as pd
+import datetime
 import random
 from tqdm import tqdm
 import string
 
 start_data = []
 termination_data = []
-run_id = ''.join(random.choice(string.ascii_letters) for _ in range(random.randint(8, 16)))
+run_id = ''.join(random.choice(string.ascii_letters) for _ in range(8))
+os.makedirs(run_id)
 
 print(f'Starting a run with an id {run_id}')
 
@@ -22,7 +24,7 @@ current_dir = "./"
 
 def log(log_msg):
     with open(f'{run_id}/logs.txt', 'a') as f:
-        f.write(log_msg)
+        f.write(f'{datetime.datetime.now()} - {log_msg} \n')
 
 def execute_and_wait(cmd, timeout=10):
     log(f'Executing "{cmd}"')
@@ -106,14 +108,17 @@ def clean_up(root_dir, dev_path):
         log(deletenullb_conf_output)
         raise Exception('Could not delete a nullblock device config')
 
-pd.DataFrame(start_data).to_csv('start_data.csv')
-pd.DataFrame(termination_data).to_csv('termination.csv')
+pd.DataFrame(start_data).to_csv(f'{run_id}/start_data.csv')
+pd.DataFrame(termination_data).to_csv(f'{run_id}/termination.csv')
 
-if not os.path.exists(newpath):
+if not os.path.exists(run_id):
     os.makedirs(run_id)
 
+    if not os.path.exists(os.path(run_id, 'traces')):
+        os.makedirs(os.path(run_id, 'traces'))
+
 for storage_latency in tqdm(STORAGE_LATENCIES):
-    print(f'Starting to test device with a storage latency of{storage_latency}')
+    print(f'Starting to test device with a storage latency of {storage_latency}')
     for i in tqdm(range(NUM_TRIALS)):
         log(f'Starting the trial number {i}')
         root_dir, dev_path = prepare_storage(storage_latency)
