@@ -6,8 +6,8 @@ NUM_TRIALS = 10
 STORAGE_LATENCY = 100
 FOLDER_MOUNT_PATH = "/mnt/ext4"
 MINECRAFT_PATH = 'server.jar'
-PRESENT_DIR = os.curdir
-
+PRESENT_DIR = os.getcwd()
+print(f'present dir is {PRESENT_DIR}')
 current_dir = "./"
 
 def execute_and_wait(cmd, timeout=10):
@@ -40,7 +40,7 @@ def prepare_storage():
     
     nullblk = nullblk.strip()
     dev_path = f'/dev/{nullblk}'
-    print('Creating a file system on memory backed storage device')
+    print(f'Creating a file system on memory backed storage device {dev_path}')
     
     mkfs_code, output = execute_and_wait(f'sudo mkfs.ext4 {dev_path}', 90)
     if mkfs_code != 0:
@@ -67,17 +67,43 @@ def prepare_storage():
     if cp_code != 0:
         print(output)
         raise Exception('Could not run copy into marked directory')
-    
-    os.chdir(root_fpath)
+
+    return root_fpath, dev_path
 
 def start_minecraft():
     print('Starting Minecraft')
     return execute_and_detach(f'sudo java -jar {MINECRAFT_PATH}')
 
-prepare_storage()
+def clean_up(root_dir, dev_path):
+    print('Unmounting the device')
+    unmount_code, unmount_output = execute_and_wait(f'sudo umount -f {dev_path}')
+    if unmount_code != 0:
+        print(f'Warning: Could not unmount {dev_path}. It might not be mounted. Details: {unmount_output}')
+        raise Exception('Could not unmount the device')
+
+    print('Deleting the device')
+    deletenullb_code, deletenullb_output = execute_and_wait(f'sudo rm -rf /dev/nullb*')
+    if deletenullb_code != 0:
+        print(deletenullb_output)
+        raise Exception('Could not delete a nullblock device')
+
+    deletenullb_conf_code, deletenullb_conf_output = execute_and_wait(f'sudo rmdir /sys/kernel/config/nullb/nullb0')
+    if deletenullb_conf_code != 0:
+        print(deletenullb_conf_output)
+        raise Exception('Could not delete a nullblock device config')
+
+root_dir, dev_path = prepare_storage()
+os.chdir(f'{root_dir}/storage-stick')
 start_time = time.time()
 minecraft = start_minecraft()
 minecraft.expect('Done', timeout=60)
+minecraft.close()
+
 end_time = time.time()
 
 print(end_time-start_time)
+
+os.chdir(PRESENT_DIR)
+print(os.curdir)
+clean_up(root_dir, dev_path)
+
