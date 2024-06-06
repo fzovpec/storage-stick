@@ -3,18 +3,16 @@ import os
 import time
 import pandas as pd
 import datetime
-import random
 from tqdm import tqdm
-import string
 
 start_data = []
 termination_data = []
-run_id = ''.join(random.choice(string.ascii_letters) for _ in range(8))
-os.makedirs(run_id)
+run_id = f'[{datetime.datetime.now()}]'
 
 print(f'Starting a run with an id {run_id}')
 
-NUM_TRIALS = 5
+NUM_TRIALS = 1
+
 STORAGE_LATENCIES = [0, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000]
 
 FOLDER_MOUNT_PATH = "/mnt/ext4"
@@ -22,9 +20,18 @@ MINECRAFT_PATH = 'server.jar'
 PRESENT_DIR = os.getcwd()
 current_dir = "./"
 
+
+if not os.path.exists('log'):
+    os.makedirs('log')
+
+if not os.path.exists(run_id):
+    os.makedirs(os.path.join('log', run_id))
+    if not os.path.exists(os.path.join('log', run_id, 'traces')):
+        os.makedirs(os.path.join('log', run_id, 'traces'))
+
 def log(log_msg):
-    with open(f'{run_id}/logs.txt', 'a') as f:
-        f.write(f'{datetime.datetime.now()} - {log_msg} \n')
+    with open(f'log/{run_id}/logs.txt', 'a') as f:
+        f.write(f'[{datetime.datetime.now()}] {log_msg} \n')
 
 def execute_and_wait(cmd, timeout=10):
     log(f'Executing "{cmd}"')
@@ -36,10 +43,12 @@ def execute_and_wait(cmd, timeout=10):
     return process.exitstatus, output
 
 def execute_and_detach(cmd):
+    log(f'Executing "{cmd}"')
     child = pexpect.spawn(cmd, encoding='utf-8')
     try:
         child.expect(pexpect.EOF, timeout=0.5)
-    except:
+        print(child.before)
+    except Exception:
         pass
     return child
 
@@ -108,17 +117,10 @@ def clean_up(root_dir, dev_path):
         log(deletenullb_conf_output)
         raise Exception('Could not delete a nullblock device config')
 
-pd.DataFrame(start_data).to_csv(f'{run_id}/start_data.csv')
-pd.DataFrame(termination_data).to_csv(f'{run_id}/termination.csv')
-
-if not os.path.exists(run_id):
-    os.makedirs(run_id)
-
-    if not os.path.exists(os.path(run_id, 'traces')):
-        os.makedirs(os.path(run_id, 'traces'))
+pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
+pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
 
 for storage_latency in tqdm(STORAGE_LATENCIES):
-    print(f'Starting to test device with a storage latency of {storage_latency}')
     for i in tqdm(range(NUM_TRIALS)):
         log(f'Starting the trial number {i}')
         root_dir, dev_path = prepare_storage(storage_latency)
@@ -127,13 +129,7 @@ for storage_latency in tqdm(STORAGE_LATENCIES):
         start_time = time.time()
         minecraft = start_minecraft()
 
-        total_run_logs_file = f'{run_id}/total_latency_{storage_latency}_trial_{i}.txt'
-        total_run_logs = execute_and_detach(f'sudo strace -f -tt -T -y -yy -s 2048 -e trace=write,writev,pwrite64,pread64,read,readv,openat,mmap -o {total_run_logs_file} -p {minecraft.pid}')
-
-        start_run_logs_file = f'{run_id}/start_run_{storage_latency}_trial_{i}.txt'
-        start_run_logs = execute_and_detach(f'sudo strace -f -tt -T -y -yy -s 2048 -e trace=write,writev,pwrite64,pread64,read,readv,openat,mmap -o {start_run_logs_file} -p {minecraft.pid}')
-
-        minecraft.expect('Done', timeout=60)
+        minecraft.expect('Done', timeout=300)
         end_time = time.time()
         time_to_start = end_time-start_time
 
@@ -144,11 +140,10 @@ for storage_latency in tqdm(STORAGE_LATENCIES):
         })
 
         start_time = time.time()
-        terminate_run_logs_file = f'{run_id}/start_run_{storage_latency}_trial_{i}.txt'
-        terminate_run_logs = execute_and_detach(f'sudo strace -f -tt -T -y -yy -s 2048 -e trace=write,writev,pwrite64,pread64,read,readv,openat,mmap -o {terminate_run_logs_file} -p {minecraft.pid}')
+        terminate_run_logs_file = f'{run_id}/traces/start_run_{storage_latency}_trial_{i}.txt'
 
         minecraft.terminate()
-        minecraft.expect(pexpect.EOF, timeout=300)
+        minecraft.expect(pexpect.EOF, timeout=1200)
         end_time = time.time()
         time_to_terminate = end_time - start_time
 
@@ -157,10 +152,10 @@ for storage_latency in tqdm(STORAGE_LATENCIES):
             'sample_num': i,
             'time': time_to_terminate
         })
-
+    
         os.chdir(PRESENT_DIR)
         clean_up(root_dir, dev_path)
 
-    pd.DataFrame(start_data).to_csv(f'{run_id}/start_data.csv')
-    pd.DataFrame(termination_data).to_csv(f'{run_id}/termination.csv')
+        pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
+        pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
 
