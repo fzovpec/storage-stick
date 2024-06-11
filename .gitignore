@@ -9,3 +9,4 @@ usercache.json
 whitelist.json
 log/*
 nohup.out
+traces/*

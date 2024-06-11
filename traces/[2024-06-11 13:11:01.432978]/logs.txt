@@ -1,0 +1,6 @@
+[2024-06-11 13:11:01.433794] Starting Minecraft 
+[2024-06-11 13:11:01.433944] Executing "sudo java -jar server.jar" 
+[2024-06-11 13:11:02.082507] Executing "sudo strace -f -tt -T -y -yy -s 2048 -e trace=read,write,pread64,pwrite64,open,close,mmap -o "traces/[2024-06-11 13:11:01.432978]/storage_traces.txt" -p 38809" 
+[2024-06-11 13:11:16.193110] Minecraft started 
+[2024-06-11 13:11:16.193246] Terminating Minecraft 
+[2024-06-11 13:11:32.572764] Minecraft terminated 
