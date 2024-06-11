@@ -92,7 +92,7 @@ def log(log_msg):
 
 def start_minecraft():
     log('Starting Minecraft')
-    return execute_and_detach(f'sudo java -jar server.jar')
+    return execute_and_detach(f'java -jar server.jar')
 
 minecraft = start_minecraft()
 
