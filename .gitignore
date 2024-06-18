@@ -10,3 +10,5 @@ whitelist.json
 log/*
 nohup.out
 traces/*
+node_modules
+node_modules/*

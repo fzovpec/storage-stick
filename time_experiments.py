@@ -11,6 +11,7 @@ parser.add_argument('--pregenerate', type=bool, help='Control whether the world 
 parser.add_argument('--storage_latency', nargs='+', type=int, help='List of storage latencies to test (in ms)', default=[0])
 parser.add_argument('--mem_limit', nargs='+', type=int, help='List of memory limits to test', default=[2048])
 parser.add_argument('--mems_limit', nargs='+', type=int, help='List of memory+swap limits to test', default=[4096])
+parser.add_argument('--num_players', nargs='+', type=int, help='Number of players to connect', default=[0])
 
 args = parser.parse_args()
 pregenerate = args.pregenerate
@@ -18,15 +19,16 @@ pregenerate = args.pregenerate
 STORAGE_LATENCIES = args.storage_latency
 MEM_LIMITS = args.mem_limit
 MEMS_LIMIT = args.mems_limit
+NUM_PLAYERS = args.num_players
 MEM_GROUP_NAME = "minecraft_test"
 
 start_data = []
 termination_data = []
-run_id = f'[{datetime.datetime.now()}]'
+run_id = f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 
 print(f'Starting a run with an id {run_id}')
 
-NUM_TRIALS = 3
+NUM_TRIALS = 1
 
 FOLDER_MOUNT_PATH = "/mnt/ext4"
 MINECRAFT_PATH = 'server.jar'
@@ -60,6 +62,7 @@ def execute_and_detach(cmd):
     child = pexpect.spawn(cmd, encoding='utf-8')
     try:
         child.expect(pexpect.EOF, timeout=0.5)
+        print('I executed cmd', cmd)
         print(child.before)
     except Exception:
         pass
@@ -157,24 +160,34 @@ def clean_up(root_dir, dev_path):
     if deletenullb_conf_code != 0:
         log(deletenullb_conf_output)
         raise Exception('Could not delete a nullblock device config')
+    
+def collect_page_faults(pid, log_fpath):
+    return execute_and_detach(f'{PRESENT_DIR}/collect_page_faults.sh {pid} {log_fpath}')
 
 pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
 pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
 
 log(f'Starting a time experiment with parameters. Pregenerate - {pregenerate}')
 
-def collect_data(storage_latency, mem_limit, mems_limit):
+def collect_data(storage_latency, mem_limit, mems_limit, num_players):
     for i in tqdm(range(NUM_TRIALS)):
         log(f'Starting the trial number {i}')
 
         prepare_memory_groups(mem_limit, mems_limit)
         root_dir, dev_path = prepare_storage(storage_latency)
-        os.chdir(f'{root_dir}/storage-stick')
 
         start_time = time.time()
+
+        os.chdir(f'{root_dir}/storage-stick')
         minecraft = start_minecraft(mems_limit)
+        
+        # start_pf = collect_page_faults(minecraft.pid, os.path.join(PRESENT_DIR, 'log', run_id, 'traces', f'faults_on_start_{storage_latency}_{mems_limit}_{i}.log'))
 
         minecraft.expect('Done', timeout=300)
+        # start_pf.terminate(force=True)
+
+        bots = execute_and_detach(f"node {os.path.join(PRESENT_DIR, 'bot.js')} {num_players}")
+
         end_time = time.time()
         time_to_start = end_time-start_time
 
@@ -182,14 +195,20 @@ def collect_data(storage_latency, mem_limit, mems_limit):
             'latency': storage_latency,
             'mem_limit': mem_limit,
             'mems_limit': mems_limit,
+            'num_players': num_players,
             'sample_num': i,
             'time': time_to_start
         })
 
+        bots.expect('Success', timeout=30)
         start_time = time.time()
 
         minecraft.terminate()
+
+        # terminate_pf = collect_page_faults(minecraft.pid, os.path.join(PRESENT_DIR, 'log', run_id, 'traces', f'faults_on_termination_{storage_latency}_{mems_limit}_{i}.log'))
         minecraft.expect(pexpect.EOF, timeout=1200)
+        # terminate_pf.terminate(force=True)
+
         end_time = time.time()
         time_to_terminate = end_time - start_time
 
@@ -197,11 +216,13 @@ def collect_data(storage_latency, mem_limit, mems_limit):
             'latency': storage_latency,
             'mem_limit': mem_limit,
             'mems_limit': mems_limit,
+            'num_players': num_players,
             'sample_num': i,
             'time': time_to_terminate
         })
-    
+
         os.chdir(PRESENT_DIR)
+
         clean_up(root_dir, dev_path)
 
         pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
@@ -210,9 +231,11 @@ def collect_data(storage_latency, mem_limit, mems_limit):
 for storage_latency in tqdm(STORAGE_LATENCIES):
     for memory_limit in tqdm(MEM_LIMITS):
         for memory_swap_limit in tqdm(MEMS_LIMIT):
-            collect_data(
-                storage_latency=storage_latency,
-                mem_limit=memory_limit,
-                mems_limit=memory_swap_limit
-            )
+            for player_count in tqdm(NUM_PLAYERS):
+                collect_data(
+                    storage_latency=storage_latency,
+                    mem_limit=memory_limit,
+                    mems_limit=memory_swap_limit,
+                    num_players=player_count
+                )
 
