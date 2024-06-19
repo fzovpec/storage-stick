@@ -24,6 +24,7 @@ MEM_GROUP_NAME = "minecraft_test"
 
 start_data = []
 termination_data = []
+save_lag = []
 run_id = f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 
 print(f'Starting a run with an id {run_id}')
@@ -169,64 +170,113 @@ pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
 
 log(f'Starting a time experiment with parameters. Pregenerate - {pregenerate}')
 
+def connect_players(num_players, minecraft, storage_latency, mem_limit, mems_limit, sample_num):
+    bots = execute_and_detach(f"node {os.path.join(PRESENT_DIR, 'bot.js')} {num_players}")
+    bots.expect('Success', timeout=30)
+
+    time.sleep(20) # it needs a small timeout to register everyone
+
+    base_height = -60
+    tp_coords = [0, 0]
+
+    for i in range(num_players):
+        tp_coords[i % 2] += 256
+        player_name = f'Bot_{i}'
+
+        try:
+            minecraft.sendline(f'/forceload add {tp_coords[0]} {tp_coords[1]}')
+            minecraft.expect(f'Marked', timeout=10)
+            minecraft.sendline(f'/tp {player_name} {tp_coords[0]} {base_height} {tp_coords[1]}')
+            minecraft.expect(f'Teleported {player_name}', timeout=10)
+            minecraft.sendline(f'/summon pig {tp_coords[0]} {base_height} {tp_coords[1]}')
+            minecraft.expect('Summoned new Pig', timeout=10)
+        except:
+            print(minecraft.before)
+    
+    for i in range(10):
+        minecraft.sendline('/save-all')
+        start_time = time.time()
+        minecraft.expect('Saved', timeout=60)
+        end_time = time.time()
+
+        time_to_save = end_time - start_time
+
+        save_lag.append({
+            'latency': storage_latency,
+            'mem_limit': mem_limit,
+            'mems_limit': mems_limit,
+            'num_players': num_players,
+            'save_num': i,
+            'sample_num': sample_num,
+            'time': time_to_save
+        })
+
+    pd.DataFrame(save_lag).to_csv(f'log/{run_id}/save_lag.csv')
+
+
+def execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_players, sample_num):
+    os.chdir(f'{root_dir}/storage-stick')
+    start_time = time.time()
+    minecraft = start_minecraft(mems_limit)
+    
+    # start_pf = collect_page_faults(minecraft.pid, os.path.join(PRESENT_DIR, 'log', run_id, 'traces', f'faults_on_start_{storage_latency}_{mems_limit}_{i}.log'))
+
+    minecraft.expect('Done', timeout=300)
+    # start_pf.terminate(force=True)
+
+    end_time = time.time()
+    time_to_start = end_time-start_time
+
+    connect_players(num_players, minecraft, storage_latency, mem_limit, mems_limit, sample_num)
+
+    start_data.append({
+        'latency': storage_latency,
+        'mem_limit': mem_limit,
+        'mems_limit': mems_limit,
+        'num_players': num_players,
+        'sample_num': sample_num,
+        'time': time_to_start
+    })
+
+    start_time = time.time()
+
+    minecraft.terminate()
+
+    # terminate_pf = collect_page_faults(minecraft.pid, os.path.join(PRESENT_DIR, 'log', run_id, 'traces', f'faults_on_termination_{storage_latency}_{mems_limit}_{i}.log'))
+    minecraft.expect(pexpect.EOF, timeout=1200)
+    # terminate_pf.terminate(force=True)
+
+    end_time = time.time()
+
+    time_to_terminate =  end_time - start_time
+
+    termination_data.append({
+        'latency': storage_latency,
+        'mem_limit': mem_limit,
+        'mems_limit': mems_limit,
+        'num_players': num_players,
+        'sample_num': sample_num,
+        'time': time_to_terminate
+    })
+
+    os.chdir(PRESENT_DIR)
+
+    pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
+    pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
+
 def collect_data(storage_latency, mem_limit, mems_limit, num_players):
     for i in tqdm(range(NUM_TRIALS)):
         log(f'Starting the trial number {i}')
 
         prepare_memory_groups(mem_limit, mems_limit)
         root_dir, dev_path = prepare_storage(storage_latency)
-
-        start_time = time.time()
-
-        os.chdir(f'{root_dir}/storage-stick')
-        minecraft = start_minecraft(mems_limit)
         
-        # start_pf = collect_page_faults(minecraft.pid, os.path.join(PRESENT_DIR, 'log', run_id, 'traces', f'faults_on_start_{storage_latency}_{mems_limit}_{i}.log'))
-
-        minecraft.expect('Done', timeout=300)
-        # start_pf.terminate(force=True)
-
-        bots = execute_and_detach(f"node {os.path.join(PRESENT_DIR, 'bot.js')} {num_players}")
-
-        end_time = time.time()
-        time_to_start = end_time-start_time
-
-        start_data.append({
-            'latency': storage_latency,
-            'mem_limit': mem_limit,
-            'mems_limit': mems_limit,
-            'num_players': num_players,
-            'sample_num': i,
-            'time': time_to_start
-        })
-
-        bots.expect('Success', timeout=30)
-        start_time = time.time()
-
-        minecraft.terminate()
-
-        # terminate_pf = collect_page_faults(minecraft.pid, os.path.join(PRESENT_DIR, 'log', run_id, 'traces', f'faults_on_termination_{storage_latency}_{mems_limit}_{i}.log'))
-        minecraft.expect(pexpect.EOF, timeout=1200)
-        # terminate_pf.terminate(force=True)
-
-        end_time = time.time()
-        time_to_terminate = end_time - start_time
-
-        termination_data.append({
-            'latency': storage_latency,
-            'mem_limit': mem_limit,
-            'mems_limit': mems_limit,
-            'num_players': num_players,
-            'sample_num': i,
-            'time': time_to_terminate
-        })
-
-        os.chdir(PRESENT_DIR)
+        try:
+            execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_players, i)
+        except Exception as e:
+            log(f'Unrecoverable exception occured, skipping the sample: {e}')
 
         clean_up(root_dir, dev_path)
-
-        pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
-        pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
 
 for storage_latency in tqdm(STORAGE_LATENCIES):
     for memory_limit in tqdm(MEM_LIMITS):

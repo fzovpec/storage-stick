@@ -99,7 +99,7 @@ minecraft = start_minecraft()
 threading.Thread(target=log_memory_usage, args=(minecraft.pid, 0.001, os.path.join(run_folder, 'mem_cons.txt')), daemon=True).start()
 
 total_run_logs_file = os.path.join(run_folder, 'storage_traces.txt')
-total_run_logs = execute_and_detach(f'sudo strace -f -tt -T -y -yy -s 2048 -e trace=read,write,pread64,pwrite64,open,close,mmap -o "{total_run_logs_file}" -p {minecraft.pid}')
+total_run_logs = execute_and_detach(f'sudo strace -f -tt -T -y -yy -s 2048 -e trace=file,openat,creat,read,write,pread64,pwrite64,open,close,mmap -o "{total_run_logs_file}" -p {minecraft.pid}')
 
 minecraft.expect('Done', timeout=300)
 log("Minecraft started")
