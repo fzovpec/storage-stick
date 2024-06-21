@@ -1,0 +1,84 @@
+{
+  "startedEpoch": 1718816616966,
+  "endedEpoch": 1718816624189,
+  "durationMs": 7222,
+  "heap": {
+    "allocationRateBytesPerSecond": 1048576.0,
+    "gcCount": 2,
+    "gcOverHeadPercent": 0.087094985,
+    "gcTotalDurationMs": 629
+  },
+  "cpuPercent": {
+    "jvm": {
+      "min": 0.0,
+      "average": 0.003954678241695676,
+      "max": 0.007518797181546688
+    },
+    "userJvm": {
+      "min": 0.0,
+      "average": 0.07126887515187263,
+      "max": 0.29471033811569214
+    },
+    "system": {
+      "min": 0.0,
+      "average": 0.0860008184931108,
+      "max": 0.31989923119544983
+    }
+  },
+  "network": {
+    "sent": {
+      "totalBytes": 0,
+      "count": 0,
+      "bytesPerSecond": 0.0,
+      "countPerSecond": 0.0,
+      "topContributors": []
+    },
+    "received": {
+      "totalBytes": 0,
+      "count": 0,
+      "bytesPerSecond": 0.0,
+      "countPerSecond": 0.0,
+      "topContributors": []
+    }
+  },
+  "fileIO": {
+    "write": {
+      "totalBytes": 480,
+      "count": 4,
+      "bytesPerSecond": 68.57142857142857,
+      "countPerSecond": 0.5714285714285714,
+      "topContributors": [
+        {
+          "path": "logs/latest.log",
+          "totalBytes": 240
+        }
+      ]
+    },
+    "read": {
+      "totalBytes": 2915,
+      "count": 4,
+      "bytesPerSecond": 416.42857142857144,
+      "countPerSecond": 0.5714285714285714,
+      "topContributors": [
+        {
+          "path": "/home/user/storage-stick/versions/1.20.4/server-1.20.4.jar",
+          "totalBytes": 2915
+        }
+      ]
+    }
+  },
+  "serverTick": {
+    "minMs": 0.613542,
+    "averageMs": 1.2590755714285713,
+    "maxMs": 3.225132,
+    "p99": 3.1149331799999995,
+    "p90": 2.1231438,
+    "p75": 1.3402355,
+    "p50": 0.824746
+  },
+  "threadAllocation": [],
+  "chunkGen": {
+    "durationNanosTotal": 0.0,
+    "status": []
+  }
+}

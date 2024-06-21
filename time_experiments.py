@@ -5,6 +5,7 @@ import pandas as pd
 import datetime
 from tqdm import tqdm
 import argparse
+import random
 
 parser = argparse.ArgumentParser(description='Process test arguments')
 parser.add_argument('--pregenerate', type=bool, help='Control whether the world should be pre-generated or started anew', default=False)
@@ -12,6 +13,7 @@ parser.add_argument('--storage_latency', nargs='+', type=int, help='List of stor
 parser.add_argument('--mem_limit', nargs='+', type=int, help='List of memory limits to test', default=[2048])
 parser.add_argument('--mems_limit', nargs='+', type=int, help='List of memory+swap limits to test', default=[4096])
 parser.add_argument('--num_players', nargs='+', type=int, help='Number of players to connect', default=[0])
+parser.add_argument('--tps', nargs='+', type=float, help='Number of teleports per second', default=[0])
 
 args = parser.parse_args()
 pregenerate = args.pregenerate
@@ -20,6 +22,7 @@ STORAGE_LATENCIES = args.storage_latency
 MEM_LIMITS = args.mem_limit
 MEMS_LIMIT = args.mems_limit
 NUM_PLAYERS = args.num_players
+TPS = args.tps
 MEM_GROUP_NAME = "minecraft_test"
 
 start_data = []
@@ -29,7 +32,7 @@ run_id = f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}"
 
 print(f'Starting a run with an id {run_id}')
 
-NUM_TRIALS = 1
+NUM_TRIALS = 6
 
 FOLDER_MOUNT_PATH = "/mnt/ext4"
 MINECRAFT_PATH = 'server.jar'
@@ -172,9 +175,9 @@ log(f'Starting a time experiment with parameters. Pregenerate - {pregenerate}')
 
 def connect_players(num_players, minecraft, storage_latency, mem_limit, mems_limit, sample_num):
     bots = execute_and_detach(f"node {os.path.join(PRESENT_DIR, 'bot.js')} {num_players}")
-    bots.expect('Success', timeout=30)
+    bots.expect('Success', timeout=200)
 
-    time.sleep(20) # it needs a small timeout to register everyone
+    time.sleep(10) # it needs a small timeout to register everyone
 
     base_height = -60
     tp_coords = [0, 0]
@@ -211,10 +214,54 @@ def connect_players(num_players, minecraft, storage_latency, mem_limit, mems_lim
             'time': time_to_save
         })
 
-    pd.DataFrame(save_lag).to_csv(f'log/{run_id}/save_lag.csv')
+    pd.DataFrame(save_lag).to_csv(f'{PRESENT_DIR}/log/{run_id}/save_lag.csv')
 
+def tp_workflow(num_players, minecraft, storage_latency, mem_limit, mems_limit, sample_num, tps):
+    # Execute and detach the bots
+    bots = execute_and_detach(f"node {os.path.join(PRESENT_DIR, 'bot.js')} {num_players}")
+    bots.expect('Success', timeout=200)
 
-def execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_players, sample_num):
+    # Small timeout to register everyone
+    time.sleep(10)
+
+    start_time_work = time.time()
+
+    base_height = -60
+
+    # Calculate delay between teleports to achieve the desired TPS
+    delay = 1 / tps
+
+    minecraft.sendline('/jfr start')
+    minecraft.expect('JFR profiling started', timeout=10)
+
+    i = 0
+
+    while True:
+        if time.time() - start_time_work > 60:
+            break
+        
+        tp_coords = [random.randint(-2000000, 2000000), random.randint(-2000000, 2000000)]
+
+        start_time = time.time()
+        player_name = f'Bot_{i % num_players}'
+        minecraft.sendline(f'/tp {player_name} {tp_coords[0]} {base_height} {tp_coords[1]}')
+        # Calculate the time taken for the sendline and expect commands
+        exec_time = time.time() - start_time
+        
+        # Adjust sleep duration to maintain the desired TPS
+        adjusted_delay = delay - exec_time
+        if adjusted_delay > 0:
+            time.sleep(adjusted_delay)
+
+        else:
+            print(f'Attention: Benchmark is running behind desired execution speed!. Benchmark is delayed by {adjusted_delay}')
+        
+        i += 1
+    
+    minecraft.sendline('/jfr stop')
+    minecraft.expect('Dumped flight recorder profiling to', timeout=10)
+
+def execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_players, sample_num, tps):
     os.chdir(f'{root_dir}/storage-stick')
     start_time = time.time()
     minecraft = start_minecraft(mems_limit)
@@ -227,7 +274,10 @@ def execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_pla
     end_time = time.time()
     time_to_start = end_time-start_time
 
-    connect_players(num_players, minecraft, storage_latency, mem_limit, mems_limit, sample_num)
+    tp_workflow(num_players, minecraft, storage_latency, mem_limit, mems_limit, sample_num, tps)
+
+    fpath = os.path.join(PRESENT_DIR, "log", run_id, f'data_average_tick_{storage_latency}_{mem_limit}_{mems_limit}_{tps}_{sample_num}.json')
+    print(execute_and_wait(f'jfr print --json --events minecraft.ServerTickTime  debug/*.jfr > "{fpath}"'))
 
     start_data.append({
         'latency': storage_latency,
@@ -264,7 +314,7 @@ def execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_pla
     pd.DataFrame(start_data).to_csv(f'log/{run_id}/start_data.csv')
     pd.DataFrame(termination_data).to_csv(f'log/{run_id}/termination.csv')
 
-def collect_data(storage_latency, mem_limit, mems_limit, num_players):
+def collect_data(storage_latency, mem_limit, mems_limit, num_players, tps):
     for i in tqdm(range(NUM_TRIALS)):
         log(f'Starting the trial number {i}')
 
@@ -272,7 +322,7 @@ def collect_data(storage_latency, mem_limit, mems_limit, num_players):
         root_dir, dev_path = prepare_storage(storage_latency)
         
         try:
-            execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_players, i)
+            execute_experiment(root_dir, storage_latency, mem_limit, mems_limit, num_players, i, tps)
         except Exception as e:
             log(f'Unrecoverable exception occured, skipping the sample: {e}')
 
@@ -282,10 +332,12 @@ for storage_latency in tqdm(STORAGE_LATENCIES):
     for memory_limit in tqdm(MEM_LIMITS):
         for memory_swap_limit in tqdm(MEMS_LIMIT):
             for player_count in tqdm(NUM_PLAYERS):
-                collect_data(
-                    storage_latency=storage_latency,
-                    mem_limit=memory_limit,
-                    mems_limit=memory_swap_limit,
-                    num_players=player_count
-                )
+                for teleport in tqdm(TPS):
+                    collect_data(
+                        storage_latency=storage_latency,
+                        mem_limit=memory_limit,
+                        mems_limit=memory_swap_limit,
+                        num_players=player_count,
+                        tps=teleport
+                    )
 

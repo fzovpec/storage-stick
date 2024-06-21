@@ -1,0 +1,40 @@
+pregenerate: False
+storage_latencies:
+  - 0
+  - 250000
+  - 1000000
+
+mem_limits:
+  - 12288
+
+mems_limits:
+  - 12288
+
+experiment: "tp"
+
+tp:
+  num_players:
+    - 5
+  
+  tps:
+    - 0.1
+    - 0.5
+    - 1
+  
+
+save:
+  storage_latencies:
+    - 0
+    - 250000
+    - 1000000
+  
+  mem_limits:
+    - 12288
+  
+  mems_limits:
+    - 12288
+  
+  num_players:
+    - 5
+  
+
