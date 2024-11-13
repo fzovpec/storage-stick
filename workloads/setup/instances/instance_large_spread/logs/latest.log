@@ -1,139 +1,167 @@
-[14:08:23] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[14:08:25] [ServerMain/INFO]: Loaded 7 recipes
-[14:08:25] [ServerMain/INFO]: Loaded 1271 advancements
-[14:08:26] [Server thread/INFO]: Starting minecraft server version 1.20.1
-[14:08:26] [Server thread/INFO]: Loading properties
-[14:08:26] [Server thread/INFO]: Default game type: CREATIVE
-[14:08:26] [Server thread/INFO]: Generating keypair
-[14:08:26] [Server thread/INFO]: Starting Minecraft server on *:25565
-[14:08:26] [Server thread/INFO]: Using epoll channel type
-[14:08:26] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[14:08:26] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[14:08:26] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[14:08:26] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[14:08:26] [Server thread/INFO]: Preparing level "world"
-[14:08:31] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[14:08:31] [Server thread/INFO]: Preparing spawn area: 0%
-[14:08:31] [Server thread/INFO]: Preparing spawn area: 0%
-[14:08:32] [Worker-Main-2/INFO]: Preparing spawn area: 83%
-[14:08:34] [Worker-Main-2/INFO]: Preparing spawn area: 83%
-[14:08:34] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:34] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:34] [Worker-Main-2/INFO]: Preparing spawn area: 83%
-[14:08:34] [Worker-Main-3/INFO]: Preparing spawn area: 83%
-[14:08:35] [Worker-Main-3/INFO]: Preparing spawn area: 83%
-[14:08:36] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:36] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:36] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:37] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:37] [Worker-Main-3/INFO]: Preparing spawn area: 83%
-[14:08:38] [Worker-Main-1/INFO]: Preparing spawn area: 83%
-[14:08:38] [Worker-Main-1/INFO]: Preparing spawn area: 85%
-[14:08:39] [Worker-Main-2/INFO]: Preparing spawn area: 88%
-[14:08:39] [Worker-Main-2/INFO]: Preparing spawn area: 91%
-[14:08:40] [Worker-Main-1/INFO]: Preparing spawn area: 96%
-[14:08:40] [Server thread/INFO]: Time elapsed: 9319 ms
-[14:08:40] [Server thread/INFO]: Done (13.739s)! For help, type "help"
-[14:08:44] [Server thread/INFO]: player_23[/127.0.0.1:46404] logged in with entity id 1 at (8587.5, 78.0, -1559.5)
-[14:08:44] [Server thread/INFO]: player_23 joined the game
-[14:08:44] [Server thread/INFO]: player_24[/127.0.0.1:46400] logged in with entity id 2 at (12369.5, 51.0, -2304.5)
-[14:08:44] [Server thread/INFO]: player_24 joined the game
-[14:08:52] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 8243ms or 164 ticks behind
-[14:08:52] [Server thread/INFO]: player_21[/127.0.0.1:46414] logged in with entity id 8 at (13003.5, 59.0, -21952.5)
-[14:08:52] [Server thread/INFO]: player_21 joined the game
-[14:08:52] [Server thread/INFO]: player_22[/127.0.0.1:46410] logged in with entity id 9 at (2190.5, 75.0, -10636.5)
-[14:08:52] [Server thread/INFO]: player_22 joined the game
-[14:08:58] [Server thread/INFO]: player_20[/127.0.0.1:46418] logged in with entity id 14 at (22001.5, 66.0, 14748.5)
-[14:08:58] [Server thread/INFO]: player_20 joined the game
-[14:08:58] [Server thread/INFO]: player_19[/127.0.0.1:46422] logged in with entity id 15 at (27679.5, 72.0, 9882.5)
-[14:08:58] [Server thread/INFO]: player_19 joined the game
-[14:09:03] [Server thread/INFO]: player_18[/127.0.0.1:46426] logged in with entity id 17 at (-10325.5, 74.0, -5861.5)
-[14:09:03] [Server thread/INFO]: player_18 joined the game
-[14:09:03] [Server thread/INFO]: player_17[/127.0.0.1:46430] logged in with entity id 18 at (-2033.5, 71.0, -6592.5)
-[14:09:03] [Server thread/INFO]: player_17 joined the game
-[14:09:12] [Server thread/INFO]: player_16[/127.0.0.1:46434] logged in with entity id 22 at (14749.5, 41.0, 6273.3)
-[14:09:12] [Server thread/INFO]: player_16 joined the game
-[14:09:12] [Server thread/INFO]: player_15[/127.0.0.1:46438] logged in with entity id 23 at (5697.5, 73.0, -12178.5)
-[14:09:12] [Server thread/INFO]: player_15 joined the game
-[14:09:19] [Server thread/INFO]: player_13[/127.0.0.1:46446] logged in with entity id 49 at (-3462.5, 47.0, -7376.5)
-[14:09:19] [Server thread/INFO]: player_13 joined the game
-[14:09:19] [Server thread/INFO]: player_14[/127.0.0.1:46442] logged in with entity id 50 at (-6351.5, 73.0, 496.5)
-[14:09:19] [Server thread/INFO]: player_14 joined the game
-[14:09:19] [Server thread/INFO]: player_12[/127.0.0.1:46450] logged in with entity id 51 at (14987.5, 69.0, -6379.5)
-[14:09:19] [Server thread/INFO]: player_12 joined the game
-[14:09:19] [Server thread/INFO]: player_11[/127.0.0.1:46454] logged in with entity id 52 at (15552.5, 78.0, 7228.5)
-[14:09:19] [Server thread/INFO]: player_11 joined the game
-[14:09:28] [Server thread/INFO]: player_9[/127.0.0.1:46462] logged in with entity id 89 at (3175.5, 50.0, -561.5)
-[14:09:28] [Server thread/INFO]: player_9 joined the game
-[14:09:28] [Server thread/INFO]: player_10[/127.0.0.1:46458] logged in with entity id 90 at (15734.5, 129.0, -5659.5)
-[14:09:28] [Server thread/INFO]: player_10 joined the game
-[14:09:30] [Server thread/INFO]: player_5[/127.0.0.1:46478] logged in with entity id 115 at (-18923.5, 74.0, -2619.5)
-[14:09:30] [Server thread/INFO]: player_5 joined the game
-[14:09:30] [Server thread/INFO]: player_6[/127.0.0.1:46474] logged in with entity id 116 at (-894.5, 68.0, -7563.5)
-[14:09:30] [Server thread/INFO]: player_6 joined the game
-[14:09:30] [Server thread/INFO]: player_7[/127.0.0.1:46470] logged in with entity id 117 at (1690.5, 59.0, -11000.5)
-[14:09:30] [Server thread/INFO]: player_7 joined the game
-[14:09:30] [Server thread/INFO]: player_8[/127.0.0.1:46466] logged in with entity id 118 at (-25228.5, 85.0, -9710.5)
-[14:09:30] [Server thread/INFO]: player_8 joined the game
-[14:09:34] [Server thread/INFO]: player_3[/127.0.0.1:46486] logged in with entity id 139 at (9437.5, 67.0, -16370.5)
-[14:09:34] [Server thread/INFO]: player_3 joined the game
-[14:09:34] [Server thread/INFO]: player_4[/127.0.0.1:46482] logged in with entity id 140 at (-8791.5, 53.0, -8326.5)
-[14:09:34] [Server thread/INFO]: player_4 joined the game
-[14:09:38] [Server thread/INFO]: player_2[/127.0.0.1:46490] logged in with entity id 255 at (18183.5, 72.0, -6115.5)
-[14:09:38] [Server thread/INFO]: player_2 joined the game
-[14:09:39] [Server thread/INFO]: player_1[/127.0.0.1:46494] logged in with entity id 257 at (-11074.5, 63.0, -1004.5)
-[14:09:39] [Server thread/INFO]: player_1 joined the game
-[14:09:42] [Server thread/INFO]: player_0[/127.0.0.1:46498] logged in with entity id 383 at (-11321.5, 70.0, 6162.5)
-[14:09:42] [Server thread/INFO]: player_0 joined the game
-[14:09:46] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 38679ms or 773 ticks behind
-[14:10:17] [Server thread/INFO]: player_23 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_23 left the game
-[14:10:17] [Server thread/INFO]: player_24 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_24 left the game
-[14:10:17] [Server thread/INFO]: player_21 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_21 left the game
-[14:10:17] [Server thread/INFO]: player_22 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_22 left the game
-[14:10:17] [Server thread/INFO]: player_19 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_19 left the game
-[14:10:17] [Server thread/INFO]: player_20 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_20 left the game
-[14:10:17] [Server thread/INFO]: player_18 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_18 left the game
-[14:10:17] [Server thread/INFO]: player_17 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_17 left the game
-[14:10:17] [Server thread/INFO]: player_16 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_16 left the game
-[14:10:17] [Server thread/INFO]: player_15 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_15 left the game
-[14:10:17] [Server thread/INFO]: player_13 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_13 left the game
-[14:10:17] [Server thread/INFO]: player_14 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_14 left the game
-[14:10:17] [Server thread/INFO]: player_12 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_12 left the game
-[14:10:17] [Server thread/INFO]: player_11 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_11 left the game
-[14:10:17] [Server thread/INFO]: player_9 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_9 left the game
-[14:10:17] [Server thread/INFO]: player_10 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_10 left the game
-[14:10:17] [Server thread/INFO]: player_5 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_5 left the game
-[14:10:17] [Server thread/INFO]: player_6 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_6 left the game
-[14:10:17] [Server thread/INFO]: player_7 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_7 left the game
-[14:10:17] [Server thread/INFO]: player_8 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_8 left the game
-[14:10:17] [Server thread/INFO]: player_3 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_3 left the game
-[14:10:17] [Server thread/INFO]: player_4 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_4 left the game
-[14:10:17] [Server thread/INFO]: player_2 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_2 left the game
-[14:10:17] [Server thread/INFO]: player_1 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_1 left the game
-[14:10:17] [Server thread/INFO]: player_0 lost connection: Disconnected
-[14:10:17] [Server thread/INFO]: player_0 left the game
-[14:10:20] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2190ms or 43 ticks behind
+[16:05:29] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16:05:29] [ServerMain/INFO]: Loaded 7 recipes
+[16:05:30] [ServerMain/INFO]: Loaded 1271 advancements
+[16:05:31] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[16:05:31] [Server thread/INFO]: Loading properties
+[16:05:31] [Server thread/INFO]: Default game type: CREATIVE
+[16:05:31] [Server thread/INFO]: Generating keypair
+[16:05:31] [Server thread/INFO]: Starting Minecraft server on *:25565
+[16:05:31] [Server thread/INFO]: Using default channel type
+[16:05:31] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[16:05:31] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[16:05:31] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[16:05:31] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[16:05:31] [Server thread/INFO]: Preparing level "world"
+[16:05:32] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[16:05:34] [Worker-Main-7/INFO]: Preparing spawn area: 0%
+[16:05:34] [Worker-Main-7/INFO]: Preparing spawn area: 0%
+[16:05:34] [Worker-Main-7/INFO]: Preparing spawn area: 0%
+[16:05:34] [Worker-Main-2/INFO]: Preparing spawn area: 1%
+[16:05:34] [Server thread/INFO]: Time elapsed: 1847 ms
+[16:05:34] [Server thread/INFO]: Done (2.992s)! For help, type "help"
+[16:06:32] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:55142] logged in with entity id 1 at (-11074.5, 63.0, -1004.5)
+[16:06:32] [Server thread/INFO]: player_1 joined the game
+[16:06:49] [Server thread/INFO]: player_1 lost connection: Disconnected
+[16:06:49] [Server thread/INFO]: player_1 left the game
+[16:07:27] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:55159] logged in with entity id 142 at (-11074.5, 63.0, -1004.5)
+[16:07:27] [Server thread/INFO]: player_1 joined the game
+[16:07:35] [Server thread/INFO]: player_1 lost connection: Disconnected
+[16:07:35] [Server thread/INFO]: player_1 left the game
+[16:21:03] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:55659] logged in with entity id 276 at (-11074.5, 63.0, -1004.5)
+[16:21:03] [Server thread/INFO]: player_1 joined the game
+[16:21:08] [Server thread/INFO]: player_1 lost connection: Disconnected
+[16:21:08] [Server thread/INFO]: player_1 left the game
+[16:21:27] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:55669] logged in with entity id 416 at (-11074.5, 63.0, -1004.5)
+[16:21:27] [Server thread/INFO]: player_1 joined the game
+[16:21:35] [Server thread/INFO]: player_1 lost connection: Disconnected
+[16:21:35] [Server thread/INFO]: player_1 left the game
+[16:21:55] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:55684] logged in with entity id 562 at (-11074.5, 63.0, -1004.5)
+[16:21:55] [Server thread/INFO]: player_1 joined the game
+[16:22:01] [Server thread/INFO]: player_1 lost connection: Disconnected
+[16:22:01] [Server thread/INFO]: player_1 left the game
+[16:36:16] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:55913] logged in with entity id 714 at (-11074.5, 63.0, -1004.5)
+[16:36:16] [Server thread/INFO]: player_1 joined the game
+[16:37:12] [Server thread/INFO]: player_1 lost connection: Disconnected
+[16:37:12] [Server thread/INFO]: player_1 left the game
+[16:37:43] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:55931] logged in with entity id 920 at (4.5, 71.0, 7.5)
+[16:37:43] [Server thread/INFO]: pl joined the game
+[16:38:10] [Server thread/INFO]: pl lost connection: Disconnected
+[16:38:10] [Server thread/INFO]: pl left the game
+[16:39:20] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:55989] logged in with entity id 1135 at (4.5, 71.0, 7.5)
+[16:39:20] [Server thread/INFO]: pl joined the game
+[16:39:40] [Server thread/INFO]: pl lost connection: Disconnected
+[16:39:40] [Server thread/INFO]: pl left the game
+[16:40:11] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:56002] logged in with entity id 1208 at (4.5, 71.0, 7.5)
+[16:40:11] [Server thread/INFO]: pl joined the game
+[16:40:16] [Server thread/INFO]: pl lost connection: Disconnected
+[16:40:16] [Server thread/INFO]: pl left the game
+[16:41:13] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:56020] logged in with entity id 1250 at (4.5, 71.0, 7.5)
+[16:41:13] [Server thread/INFO]: pl joined the game
+[16:41:19] [Server thread/INFO]: pl lost connection: Invalid move player packet received
+[16:41:19] [Server thread/INFO]: pl left the game
+[16:43:39] [Server thread/INFO]: gleb4[/127.0.0.1:56117] logged in with entity id 1299 at (1.5, 72.0, -3.5)
+[16:43:39] [Server thread/INFO]: gleb4 joined the game
+[16:44:44] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:56156] logged in with entity id 1659 at (4.5, 71.0, 7.5)
+[16:44:44] [Server thread/INFO]: pl joined the game
+[16:45:47] [Server thread/INFO]: pl lost connection: Invalid move player packet received
+[16:45:47] [Server thread/INFO]: pl left the game
+[16:46:18] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:56212] logged in with entity id 1870 at (4.5, 71.0, 7.5)
+[16:46:18] [Server thread/INFO]: pl joined the game
+[16:51:13] [Server thread/INFO]: pl lost connection: Disconnected
+[16:51:13] [Server thread/INFO]: pl left the game
+[16:51:16] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:56414] logged in with entity id 2494 at (4.5, 71.0, 7.5)
+[16:51:16] [Server thread/INFO]: pl joined the game
+[16:51:28] [Server thread/INFO]: pl lost connection: Disconnected
+[16:51:28] [Server thread/INFO]: pl left the game
+[16:51:48] [Server thread/INFO]: pl[/[0:0:0:0:0:0:0:1]:56426] logged in with entity id 2595 at (4.5, 71.0, 7.5)
+[16:51:48] [Server thread/INFO]: pl joined the game
+[16:52:23] [Server thread/INFO]: pl lost connection: Disconnected
+[16:52:23] [Server thread/INFO]: pl left the game
+[16:52:32] [Server thread/INFO]: pl1[/[0:0:0:0:0:0:0:1]:56451] logged in with entity id 2698 at (1.5, 72.0, -3.5)
+[16:52:32] [Server thread/INFO]: pl1 joined the game
+[16:53:33] [Server thread/INFO]: pl1 lost connection: Disconnected
+[16:53:33] [Server thread/INFO]: pl1 left the game
+[16:53:40] [Server thread/INFO]: pl2[/[0:0:0:0:0:0:0:1]:56489] logged in with entity id 2854 at (9.5, 79.0, 1.5)
+[16:53:40] [Server thread/INFO]: pl2 joined the game
+[16:54:06] [Server thread/INFO]: pl2 lost connection: Invalid move player packet received
+[16:54:06] [Server thread/INFO]: pl2 left the game
+[16:54:25] [Server thread/INFO]: pl2[/[0:0:0:0:0:0:0:1]:56516] logged in with entity id 3007 at (9.5, 79.0, 1.5)
+[16:54:25] [Server thread/INFO]: pl2 joined the game
+[16:54:30] [Server thread/INFO]: pl2 lost connection: Invalid move player packet received
+[16:54:30] [Server thread/INFO]: pl2 left the game
+[16:56:29] [Server thread/INFO]: pl2[/[0:0:0:0:0:0:0:1]:56622] logged in with entity id 3236 at (9.5, 79.0, 1.5)
+[16:56:29] [Server thread/INFO]: pl2 joined the game
+[16:56:41] [Server thread/INFO]: pl2 lost connection: Disconnected
+[16:56:41] [Server thread/INFO]: pl2 left the game
+[16:56:54] [Server thread/INFO]: pl2[/[0:0:0:0:0:0:0:1]:56636] logged in with entity id 3298 at (9.5, 79.0, 1.5)
+[16:56:54] [Server thread/INFO]: pl2 joined the game
+[16:57:10] [Server thread/INFO]: pl2 lost connection: Disconnected
+[16:57:10] [Server thread/INFO]: pl2 left the game
+[16:57:24] [Server thread/INFO]: pl2[/[0:0:0:0:0:0:0:1]:56647] logged in with entity id 3354 at (9.5, 79.0, 1.5)
+[16:57:24] [Server thread/INFO]: pl2 joined the game
+[16:59:47] [Server thread/INFO]: pl2 lost connection: Disconnected
+[16:59:47] [Server thread/INFO]: pl2 left the game
+[16:59:53] [Server thread/INFO]: pl3[/[0:0:0:0:0:0:0:1]:56767] logged in with entity id 3693 at (-5.5, 71.0, 9.5)
+[16:59:53] [Server thread/INFO]: pl3 joined the game
+[17:00:17] [Server thread/INFO]: pl3 lost connection: Disconnected
+[17:00:17] [Server thread/INFO]: pl3 left the game
+[17:00:47] [Server thread/INFO]: pl3[/[0:0:0:0:0:0:0:1]:56792] logged in with entity id 3823 at (-5.5, 71.0, 9.5)
+[17:00:47] [Server thread/INFO]: pl3 joined the game
+[17:00:52] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:03] [Server thread/INFO]: [Not Secure] <pl3> starting to dig dirt
+[17:01:32] [Server thread/INFO]: pl3 lost connection: Disconnected
+[17:01:32] [Server thread/INFO]: pl3 left the game
+[17:01:37] [Server thread/INFO]: pl3[/[0:0:0:0:0:0:0:1]:56824] logged in with entity id 3999 at (-5.5, 69.0, 9.5)
+[17:01:37] [Server thread/INFO]: pl3 joined the game
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: [Not Secure] <pl3> starting to dig grass_block
+[17:01:51] [Server thread/INFO]: pl3 lost connection: Disconnected
+[17:01:51] [Server thread/INFO]: pl3 left the game
+[17:01:51] [Server thread/WARN]: handleDisconnection() called twice
+[17:44:57] [Server thread/INFO]: ph[/[0:0:0:0:0:0:0:1]:57314] logged in with entity id 6880 at (-8.5, 77.0, 0.5)
+[17:44:58] [Server thread/INFO]: ph joined the game
+[17:45:39] [Server thread/INFO]: [Not Secure] <ph> starting to dig spruce_leaves
+[17:45:39] [Server thread/INFO]: ph lost connection: Disconnected
+[17:45:39] [Server thread/INFO]: ph left the game
+[17:47:24] [Server thread/INFO]: pu[/[0:0:0:0:0:0:0:1]:57343] logged in with entity id 7174 at (-6.5, 71.0, 7.5)
+[17:47:24] [Server thread/INFO]: pu joined the game
+[17:47:56] [Server thread/INFO]: [Not Secure] <pu> cannot dig
+[17:48:14] [Server thread/INFO]: pu lost connection: Disconnected
+[17:48:14] [Server thread/INFO]: pu left the game
+[17:48:18] [Server thread/INFO]: pu[/[0:0:0:0:0:0:0:1]:57361] logged in with entity id 7302 at (-6.5, 71.0, 7.5)
+[17:48:18] [Server thread/INFO]: pu joined the game
+[17:48:27] [Server thread/INFO]: [Not Secure] <pu> cannot dig
+[17:49:18] [Server thread/INFO]: [Not Secure] <pu> starting to dig dirt
+[17:50:36] [Server thread/INFO]: [Not Secure] <pu> starting to dig grass_block
+[17:50:55] [Server thread/INFO]: [Not Secure] <pu> cannot dig

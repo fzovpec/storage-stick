@@ -26,7 +26,6 @@ with open(args.Input, 'r') as f:
     line = f.readline()
     while line:
         timestamp, action, argument = line.strip().split(' ')
-        print(timestamp, action, argument)
         timestamp = float(timestamp)
 
         delta = timestamp - current_time
@@ -37,5 +36,7 @@ with open(args.Input, 'r') as f:
 
         if action == 'player_join':
             player_emulation.sendline(f'login {argument}')
+        elif action == 'remove_block':
+            player_emulation.sendline(f'remove_block {argument}')
 
         line = f.readline()
