@@ -165,3 +165,25 @@
 [17:49:18] [Server thread/INFO]: [Not Secure] <pu> starting to dig dirt
 [17:50:36] [Server thread/INFO]: [Not Secure] <pu> starting to dig grass_block
 [17:50:55] [Server thread/INFO]: [Not Secure] <pu> cannot dig
+[18:07:38] [Server thread/INFO]: pu lost connection: Disconnected
+[18:07:38] [Server thread/INFO]: pu left the game
+[18:08:25] [Server thread/INFO]: py[/[0:0:0:0:0:0:0:1]:57815] logged in with entity id 9779 at (10.5, 79.0, -2.5)
+[18:08:25] [Server thread/INFO]: py joined the game
+[18:08:54] [Server thread/INFO]: py lost connection: Disconnected
+[18:08:54] [Server thread/INFO]: py left the game
+[18:09:14] [Server thread/INFO]: hi[/[0:0:0:0:0:0:0:1]:57841] logged in with entity id 9932 at (-0.5, 74.0, 8.5)
+[18:09:14] [Server thread/INFO]: hi joined the game
+[18:09:38] [Server thread/INFO]: hi lost connection: Disconnected
+[18:09:38] [Server thread/INFO]: hi left the game
+[18:10:18] [Server thread/INFO]: hi[/[0:0:0:0:0:0:0:1]:57878] logged in with entity id 10091 at (-0.5, 74.0, 8.5)
+[18:10:18] [Server thread/INFO]: hi joined the game
+[18:11:26] [Server thread/INFO]: hi lost connection: Disconnected
+[18:11:26] [Server thread/INFO]: hi left the game
+[18:11:31] [Server thread/INFO]: hi[/[0:0:0:0:0:0:0:1]:57910] logged in with entity id 10255 at (-1.5, 70.0, 20.38458665576189)
+[18:11:31] [Server thread/INFO]: hi joined the game
+[18:13:16] [Server thread/INFO]: ho[/[0:0:0:0:0:0:0:1]:57970] logged in with entity id 10688 at (-8.5, 72.0, -1.5)
+[18:13:16] [Server thread/INFO]: ho joined the game
+[18:20:24] [Server thread/INFO]: hi lost connection: Disconnected
+[18:20:24] [Server thread/INFO]: hi left the game
+[18:20:24] [Server thread/INFO]: ho lost connection: Disconnected
+[18:20:24] [Server thread/INFO]: ho left the game

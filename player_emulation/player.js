@@ -1,4 +1,7 @@
 const mineflayer = require('mineflayer');
+const pathfinder = require('mineflayer-pathfinder').pathfinder
+const Movements = require('mineflayer-pathfinder').Movements
+const { GoalXZ } = require('mineflayer-pathfinder').goals
 const readline = require('readline');
 const Vec3 = require('vec3');
 const fs = require('fs');
@@ -40,7 +43,9 @@ async function login(player_name){
 
             fs.appendFileSync(logFilePath, `${player_name} ${endTime - startTime}\n`, 'utf8');
         });
-      });
+    });
+
+    bot.loadPlugin(pathfinder)
 }
 
 async function removeBlock(player_name, args){
@@ -79,6 +84,23 @@ async function removeBlock(player_name, args){
     }
 }
 
+async function move(player_name, args){
+    const bot = players[player_name];
+    if(!bot){
+        console.log(`error finding a player with nickname ${player_name}`);
+        return
+    }
+
+    const [x, z] = args;
+    if (!(x && z)){
+        console.log('coordinates are not completed')
+    }
+
+    const defaultMove = new Movements(bot);
+    bot.pathfinder.setMovements(defaultMove);
+    bot.pathfinder.setGoal(new GoalXZ(x, z));
+}
+
 function handleCommand(action, playerName, args) {
     switch (action) {
         case 'login':
@@ -86,6 +108,11 @@ function handleCommand(action, playerName, args) {
             break;
         case 'remove_block':
             removeBlock(playerName, args)
+            break;
+        case 'move':
+            move(playerName, args);
+            break;
+        case 'place_block':
             break;
         default:
             console.log(`Unknown action: ${action}`);
