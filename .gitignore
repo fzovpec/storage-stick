@@ -2,3 +2,4 @@
 node_modules
 setup_traces/*
 traces/*
+./workloads/setup/instances/
