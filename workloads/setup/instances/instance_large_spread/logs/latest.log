@@ -1,0 +1,139 @@
+[14:08:23] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[14:08:25] [ServerMain/INFO]: Loaded 7 recipes
+[14:08:25] [ServerMain/INFO]: Loaded 1271 advancements
+[14:08:26] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[14:08:26] [Server thread/INFO]: Loading properties
+[14:08:26] [Server thread/INFO]: Default game type: CREATIVE
+[14:08:26] [Server thread/INFO]: Generating keypair
+[14:08:26] [Server thread/INFO]: Starting Minecraft server on *:25565
+[14:08:26] [Server thread/INFO]: Using epoll channel type
+[14:08:26] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[14:08:26] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[14:08:26] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[14:08:26] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[14:08:26] [Server thread/INFO]: Preparing level "world"
+[14:08:31] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[14:08:31] [Server thread/INFO]: Preparing spawn area: 0%
+[14:08:31] [Server thread/INFO]: Preparing spawn area: 0%
+[14:08:32] [Worker-Main-2/INFO]: Preparing spawn area: 83%
+[14:08:34] [Worker-Main-2/INFO]: Preparing spawn area: 83%
+[14:08:34] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:34] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:34] [Worker-Main-2/INFO]: Preparing spawn area: 83%
+[14:08:34] [Worker-Main-3/INFO]: Preparing spawn area: 83%
+[14:08:35] [Worker-Main-3/INFO]: Preparing spawn area: 83%
+[14:08:36] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:36] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:36] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:37] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:37] [Worker-Main-3/INFO]: Preparing spawn area: 83%
+[14:08:38] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[14:08:38] [Worker-Main-1/INFO]: Preparing spawn area: 85%
+[14:08:39] [Worker-Main-2/INFO]: Preparing spawn area: 88%
+[14:08:39] [Worker-Main-2/INFO]: Preparing spawn area: 91%
+[14:08:40] [Worker-Main-1/INFO]: Preparing spawn area: 96%
+[14:08:40] [Server thread/INFO]: Time elapsed: 9319 ms
+[14:08:40] [Server thread/INFO]: Done (13.739s)! For help, type "help"
+[14:08:44] [Server thread/INFO]: player_23[/127.0.0.1:46404] logged in with entity id 1 at (8587.5, 78.0, -1559.5)
+[14:08:44] [Server thread/INFO]: player_23 joined the game
+[14:08:44] [Server thread/INFO]: player_24[/127.0.0.1:46400] logged in with entity id 2 at (12369.5, 51.0, -2304.5)
+[14:08:44] [Server thread/INFO]: player_24 joined the game
+[14:08:52] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 8243ms or 164 ticks behind
+[14:08:52] [Server thread/INFO]: player_21[/127.0.0.1:46414] logged in with entity id 8 at (13003.5, 59.0, -21952.5)
+[14:08:52] [Server thread/INFO]: player_21 joined the game
+[14:08:52] [Server thread/INFO]: player_22[/127.0.0.1:46410] logged in with entity id 9 at (2190.5, 75.0, -10636.5)
+[14:08:52] [Server thread/INFO]: player_22 joined the game
+[14:08:58] [Server thread/INFO]: player_20[/127.0.0.1:46418] logged in with entity id 14 at (22001.5, 66.0, 14748.5)
+[14:08:58] [Server thread/INFO]: player_20 joined the game
+[14:08:58] [Server thread/INFO]: player_19[/127.0.0.1:46422] logged in with entity id 15 at (27679.5, 72.0, 9882.5)
+[14:08:58] [Server thread/INFO]: player_19 joined the game
+[14:09:03] [Server thread/INFO]: player_18[/127.0.0.1:46426] logged in with entity id 17 at (-10325.5, 74.0, -5861.5)
+[14:09:03] [Server thread/INFO]: player_18 joined the game
+[14:09:03] [Server thread/INFO]: player_17[/127.0.0.1:46430] logged in with entity id 18 at (-2033.5, 71.0, -6592.5)
+[14:09:03] [Server thread/INFO]: player_17 joined the game
+[14:09:12] [Server thread/INFO]: player_16[/127.0.0.1:46434] logged in with entity id 22 at (14749.5, 41.0, 6273.3)
+[14:09:12] [Server thread/INFO]: player_16 joined the game
+[14:09:12] [Server thread/INFO]: player_15[/127.0.0.1:46438] logged in with entity id 23 at (5697.5, 73.0, -12178.5)
+[14:09:12] [Server thread/INFO]: player_15 joined the game
+[14:09:19] [Server thread/INFO]: player_13[/127.0.0.1:46446] logged in with entity id 49 at (-3462.5, 47.0, -7376.5)
+[14:09:19] [Server thread/INFO]: player_13 joined the game
+[14:09:19] [Server thread/INFO]: player_14[/127.0.0.1:46442] logged in with entity id 50 at (-6351.5, 73.0, 496.5)
+[14:09:19] [Server thread/INFO]: player_14 joined the game
+[14:09:19] [Server thread/INFO]: player_12[/127.0.0.1:46450] logged in with entity id 51 at (14987.5, 69.0, -6379.5)
+[14:09:19] [Server thread/INFO]: player_12 joined the game
+[14:09:19] [Server thread/INFO]: player_11[/127.0.0.1:46454] logged in with entity id 52 at (15552.5, 78.0, 7228.5)
+[14:09:19] [Server thread/INFO]: player_11 joined the game
+[14:09:28] [Server thread/INFO]: player_9[/127.0.0.1:46462] logged in with entity id 89 at (3175.5, 50.0, -561.5)
+[14:09:28] [Server thread/INFO]: player_9 joined the game
+[14:09:28] [Server thread/INFO]: player_10[/127.0.0.1:46458] logged in with entity id 90 at (15734.5, 129.0, -5659.5)
+[14:09:28] [Server thread/INFO]: player_10 joined the game
+[14:09:30] [Server thread/INFO]: player_5[/127.0.0.1:46478] logged in with entity id 115 at (-18923.5, 74.0, -2619.5)
+[14:09:30] [Server thread/INFO]: player_5 joined the game
+[14:09:30] [Server thread/INFO]: player_6[/127.0.0.1:46474] logged in with entity id 116 at (-894.5, 68.0, -7563.5)
+[14:09:30] [Server thread/INFO]: player_6 joined the game
+[14:09:30] [Server thread/INFO]: player_7[/127.0.0.1:46470] logged in with entity id 117 at (1690.5, 59.0, -11000.5)
+[14:09:30] [Server thread/INFO]: player_7 joined the game
+[14:09:30] [Server thread/INFO]: player_8[/127.0.0.1:46466] logged in with entity id 118 at (-25228.5, 85.0, -9710.5)
+[14:09:30] [Server thread/INFO]: player_8 joined the game
+[14:09:34] [Server thread/INFO]: player_3[/127.0.0.1:46486] logged in with entity id 139 at (9437.5, 67.0, -16370.5)
+[14:09:34] [Server thread/INFO]: player_3 joined the game
+[14:09:34] [Server thread/INFO]: player_4[/127.0.0.1:46482] logged in with entity id 140 at (-8791.5, 53.0, -8326.5)
+[14:09:34] [Server thread/INFO]: player_4 joined the game
+[14:09:38] [Server thread/INFO]: player_2[/127.0.0.1:46490] logged in with entity id 255 at (18183.5, 72.0, -6115.5)
+[14:09:38] [Server thread/INFO]: player_2 joined the game
+[14:09:39] [Server thread/INFO]: player_1[/127.0.0.1:46494] logged in with entity id 257 at (-11074.5, 63.0, -1004.5)
+[14:09:39] [Server thread/INFO]: player_1 joined the game
+[14:09:42] [Server thread/INFO]: player_0[/127.0.0.1:46498] logged in with entity id 383 at (-11321.5, 70.0, 6162.5)
+[14:09:42] [Server thread/INFO]: player_0 joined the game
+[14:09:46] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 38679ms or 773 ticks behind
+[14:10:17] [Server thread/INFO]: player_23 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_23 left the game
+[14:10:17] [Server thread/INFO]: player_24 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_24 left the game
+[14:10:17] [Server thread/INFO]: player_21 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_21 left the game
+[14:10:17] [Server thread/INFO]: player_22 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_22 left the game
+[14:10:17] [Server thread/INFO]: player_19 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_19 left the game
+[14:10:17] [Server thread/INFO]: player_20 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_20 left the game
+[14:10:17] [Server thread/INFO]: player_18 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_18 left the game
+[14:10:17] [Server thread/INFO]: player_17 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_17 left the game
+[14:10:17] [Server thread/INFO]: player_16 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_16 left the game
+[14:10:17] [Server thread/INFO]: player_15 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_15 left the game
+[14:10:17] [Server thread/INFO]: player_13 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_13 left the game
+[14:10:17] [Server thread/INFO]: player_14 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_14 left the game
+[14:10:17] [Server thread/INFO]: player_12 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_12 left the game
+[14:10:17] [Server thread/INFO]: player_11 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_11 left the game
+[14:10:17] [Server thread/INFO]: player_9 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_9 left the game
+[14:10:17] [Server thread/INFO]: player_10 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_10 left the game
+[14:10:17] [Server thread/INFO]: player_5 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_5 left the game
+[14:10:17] [Server thread/INFO]: player_6 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_6 left the game
+[14:10:17] [Server thread/INFO]: player_7 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_7 left the game
+[14:10:17] [Server thread/INFO]: player_8 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_8 left the game
+[14:10:17] [Server thread/INFO]: player_3 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_3 left the game
+[14:10:17] [Server thread/INFO]: player_4 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_4 left the game
+[14:10:17] [Server thread/INFO]: player_2 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_2 left the game
+[14:10:17] [Server thread/INFO]: player_1 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_1 left the game
+[14:10:17] [Server thread/INFO]: player_0 lost connection: Disconnected
+[14:10:17] [Server thread/INFO]: player_0 left the game
+[14:10:20] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2190ms or 43 ticks behind

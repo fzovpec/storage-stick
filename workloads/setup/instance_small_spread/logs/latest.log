@@ -1,0 +1,208 @@
+[16:59:37] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16:59:38] [ServerMain/INFO]: Loaded 7 recipes
+[16:59:38] [ServerMain/INFO]: Loaded 1271 advancements
+[16:59:39] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[16:59:39] [Server thread/INFO]: Loading properties
+[16:59:39] [Server thread/INFO]: Default game type: CREATIVE
+[16:59:39] [Server thread/INFO]: Generating keypair
+[16:59:39] [Server thread/INFO]: Starting Minecraft server on *:25565
+[16:59:39] [Server thread/INFO]: Using default channel type
+[16:59:39] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[16:59:39] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[16:59:39] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[16:59:39] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[16:59:39] [Server thread/INFO]: Preparing level "world"
+[16:59:41] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[16:59:41] [Worker-Main-9/INFO]: Preparing spawn area: 0%
+[16:59:41] [Worker-Main-8/INFO]: Preparing spawn area: 0%
+[16:59:42] [Worker-Main-8/INFO]: Preparing spawn area: 1%
+[16:59:42] [Worker-Main-5/INFO]: Preparing spawn area: 5%
+[16:59:43] [Worker-Main-8/INFO]: Preparing spawn area: 10%
+[16:59:43] [Worker-Main-2/INFO]: Preparing spawn area: 15%
+[16:59:44] [Worker-Main-2/INFO]: Preparing spawn area: 21%
+[16:59:44] [Worker-Main-8/INFO]: Preparing spawn area: 25%
+[16:59:45] [Worker-Main-9/INFO]: Preparing spawn area: 31%
+[16:59:45] [Worker-Main-3/INFO]: Preparing spawn area: 35%
+[16:59:46] [Worker-Main-4/INFO]: Preparing spawn area: 41%
+[16:59:46] [Worker-Main-9/INFO]: Preparing spawn area: 45%
+[16:59:47] [Worker-Main-6/INFO]: Preparing spawn area: 51%
+[16:59:47] [Worker-Main-1/INFO]: Preparing spawn area: 57%
+[16:59:48] [Worker-Main-1/INFO]: Preparing spawn area: 62%
+[16:59:48] [Worker-Main-4/INFO]: Preparing spawn area: 68%
+[16:59:49] [Worker-Main-3/INFO]: Preparing spawn area: 73%
+[16:59:49] [Worker-Main-4/INFO]: Preparing spawn area: 80%
+[16:59:50] [Worker-Main-7/INFO]: Preparing spawn area: 84%
+[16:59:50] [Worker-Main-1/INFO]: Preparing spawn area: 91%
+[16:59:51] [Worker-Main-6/INFO]: Preparing spawn area: 97%
+[16:59:51] [Server thread/INFO]: Time elapsed: 10162 ms
+[16:59:51] [Server thread/INFO]: Done (11.921s)! For help, type "help"
+[16:59:52] [Server thread/INFO]: player_0[/[0:0:0:0:0:0:0:1]:65484] logged in with entity id 144 at (1.5, 87.0, 9.5)
+[16:59:52] [Server thread/INFO]: player_0 joined the game
+[16:59:53] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_0
+[16:59:53] [Server thread/INFO]: player_0 was killed
+[16:59:53] [Server thread/INFO]: Killed player_0
+[16:59:53] [Server thread/WARN]: player_0 moved too quickly! 31.0,213.10000000000002,52.0
+[17:00:03] [Server thread/INFO]: player_1[/[0:0:0:0:0:0:0:1]:65496] logged in with entity id 406 at (4.5, 93.0, 5.5)
+[17:00:03] [Server thread/INFO]: player_1 joined the game
+[17:00:03] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_1
+[17:00:03] [Server thread/INFO]: player_1 was killed
+[17:00:03] [Server thread/INFO]: Killed player_1
+[17:00:13] [Server thread/INFO]: player_2[/[0:0:0:0:0:0:0:1]:65505] logged in with entity id 470 at (4.5, 95.0, 1.5)
+[17:00:13] [Server thread/INFO]: player_2 joined the game
+[17:00:14] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_2
+[17:00:14] [Server thread/INFO]: player_2 was killed
+[17:00:14] [Server thread/INFO]: Killed player_2
+[17:00:24] [Server thread/INFO]: player_3[/[0:0:0:0:0:0:0:1]:65507] logged in with entity id 557 at (0.5, 88.0, 9.5)
+[17:00:24] [Server thread/INFO]: player_3 joined the game
+[17:00:25] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_3
+[17:00:25] [Server thread/INFO]: player_3 was killed
+[17:00:25] [Server thread/INFO]: Killed player_3
+[17:00:25] [Server thread/WARN]: player_3 moved too quickly! 32.0,212.10000000000002,52.0
+[17:00:35] [Server thread/INFO]: player_4[/[0:0:0:0:0:0:0:1]:65510] logged in with entity id 581 at (-5.5, 93.0, 7.5)
+[17:00:35] [Server thread/INFO]: player_4 joined the game
+[17:00:35] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_4
+[17:00:35] [Server thread/INFO]: player_4 was killed
+[17:00:35] [Server thread/INFO]: Killed player_4
+[17:00:46] [Server thread/INFO]: player_5[/[0:0:0:0:0:0:0:1]:65512] logged in with entity id 598 at (5.5, 95.0, -0.5)
+[17:00:46] [Server thread/INFO]: player_5 joined the game
+[17:00:46] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_5
+[17:00:46] [Server thread/INFO]: player_5 was killed
+[17:00:46] [Server thread/INFO]: Killed player_5
+[17:00:46] [Server thread/WARN]: player_5 moved too quickly! -73.0,205.10000000000002,-9.0
+[17:00:56] [Server thread/INFO]: player_6[/[0:0:0:0:0:0:0:1]:65535] logged in with entity id 616 at (9.5, 94.0, 4.5)
+[17:00:56] [Server thread/INFO]: player_6 joined the game
+[17:00:57] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_6
+[17:00:57] [Server thread/INFO]: player_6 was killed
+[17:00:57] [Server thread/INFO]: Killed player_6
+[17:01:07] [Server thread/INFO]: player_7[/[0:0:0:0:0:0:0:1]:49159] logged in with entity id 636 at (9.5, 92.0, 6.5)
+[17:01:07] [Server thread/INFO]: player_7 joined the game
+[17:01:07] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_7
+[17:01:08] [Server thread/INFO]: player_7 was killed
+[17:01:08] [Server thread/INFO]: Killed player_7
+[17:01:18] [Server thread/INFO]: player_8[/[0:0:0:0:0:0:0:1]:49161] logged in with entity id 657 at (-0.5, 95.0, 2.5)
+[17:01:18] [Server thread/INFO]: player_8 joined the game
+[17:01:18] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_8
+[17:01:18] [Server thread/INFO]: player_8 was killed
+[17:01:18] [Server thread/INFO]: Killed player_8
+[17:01:18] [Server thread/WARN]: player_8 moved too quickly! -67.0,205.10000000000002,-12.0
+[17:01:28] [Server thread/INFO]: player_9[/[0:0:0:0:0:0:0:1]:49169] logged in with entity id 695 at (4.5, 96.0, -4.5)
+[17:01:28] [Server thread/INFO]: player_9 joined the game
+[17:01:29] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_9
+[17:01:29] [Server thread/INFO]: player_9 was killed
+[17:01:29] [Server thread/INFO]: Killed player_9
+[17:01:29] [Server thread/WARN]: player_9 moved too quickly! -72.0,204.10000000000002,-5.0
+[17:01:39] [Server thread/INFO]: player_10[/[0:0:0:0:0:0:0:1]:49171] logged in with entity id 712 at (10.5, 94.0, 1.5)
+[17:01:39] [Server thread/INFO]: player_10 joined the game
+[17:01:40] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_10
+[17:01:40] [Server thread/INFO]: player_10 was killed
+[17:01:40] [Server thread/INFO]: Killed player_10
+[17:01:50] [Server thread/INFO]: player_11[/[0:0:0:0:0:0:0:1]:49183] logged in with entity id 730 at (2.5, 96.0, -0.5)
+[17:01:50] [Server thread/INFO]: player_11 joined the game
+[17:01:50] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_11
+[17:01:50] [Server thread/INFO]: player_11 was killed
+[17:01:50] [Server thread/INFO]: Killed player_11
+[17:01:50] [Server thread/WARN]: player_11 moved too quickly! -70.0,204.10000000000002,-9.0
+[17:02:00] [Server thread/INFO]: player_12[/[0:0:0:0:0:0:0:1]:49200] logged in with entity id 756 at (-2.5, 96.0, -3.5)
+[17:02:00] [Server thread/INFO]: player_12 joined the game
+[17:02:01] [Server thread/INFO]: Set spawn point to 69, 300, 64 [0.0] in minecraft:overworld for player_12
+[17:02:01] [Server thread/INFO]: player_12 was killed
+[17:02:01] [Server thread/INFO]: Killed player_12
+[17:02:01] [Server thread/WARN]: player_12 moved too quickly! 72.0,204.10000000000002,68.0
+[17:02:11] [Server thread/INFO]: player_13[/[0:0:0:0:0:0:0:1]:49205] logged in with entity id 799 at (8.5, 87.0, 10.5)
+[17:02:11] [Server thread/INFO]: player_13 joined the game
+[17:02:12] [Server thread/INFO]: Set spawn point to -95, 300, 46 [0.0] in minecraft:overworld for player_13
+[17:02:12] [Server thread/INFO]: player_13 was killed
+[17:02:12] [Server thread/INFO]: Killed player_13
+[17:02:22] [Server thread/INFO]: player_14[/[0:0:0:0:0:0:0:1]:49207] logged in with entity id 850 at (5.5, 95.0, 0.5)
+[17:02:22] [Server thread/INFO]: player_14 joined the game
+[17:02:22] [Server thread/INFO]: Set spawn point to 110, 300, -138 [0.0] in minecraft:overworld for player_14
+[17:02:22] [Server thread/INFO]: player_14 was killed
+[17:02:22] [Server thread/INFO]: Killed player_14
+[17:02:22] [Server thread/WARN]: player_14 moved too quickly! 105.0,205.10000000000002,-138.0
+[17:02:33] [Server thread/INFO]: player_15[/[0:0:0:0:0:0:0:1]:49209] logged in with entity id 1138 at (-1.5, 97.0, -8.5)
+[17:02:33] [Server thread/INFO]: player_15 joined the game
+[17:02:33] [Server thread/INFO]: Set spawn point to -164, 300, 9 [0.0] in minecraft:overworld for player_15
+[17:02:33] [Server thread/INFO]: player_15 was killed
+[17:02:33] [Server thread/INFO]: Killed player_15
+[17:02:33] [Server thread/WARN]: player_15 moved too quickly! -162.0,203.10000000000002,18.0
+[17:02:36] [Server thread/WARN]: player_15 moved too quickly! 0.0,-12.48751206236716,0.0
+[17:02:36] [Server thread/WARN]: player_15 moved too quickly! 0.0,-10.314656891539244,0.0
+[17:02:43] [Server thread/INFO]: player_16[/[0:0:0:0:0:0:0:1]:49211] logged in with entity id 1263 at (9.5, 90.0, 7.5)
+[17:02:43] [Server thread/INFO]: player_16 joined the game
+[17:02:44] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_16
+[17:02:44] [Server thread/INFO]: player_16 was killed
+[17:02:44] [Server thread/INFO]: Killed player_16
+[17:02:44] [Server thread/WARN]: player_16 moved too quickly! 23.0,210.10000000000002,54.0
+[17:02:54] [Server thread/INFO]: player_17[/[0:0:0:0:0:0:0:1]:49213] logged in with entity id 1296 at (-6.5, 98.0, -7.5)
+[17:02:54] [Server thread/INFO]: player_17 joined the game
+[17:02:54] [Server thread/INFO]: Set spawn point to -95, 300, 46 [0.0] in minecraft:overworld for player_17
+[17:02:55] [Server thread/INFO]: player_17 was killed
+[17:02:55] [Server thread/INFO]: Killed player_17
+[17:02:55] [Server thread/WARN]: player_17 moved too quickly! -88.0,202.10000000000002,54.0
+[17:03:05] [Server thread/INFO]: player_18[/[0:0:0:0:0:0:0:1]:49218] logged in with entity id 1344 at (-1.5, 97.0, -7.5)
+[17:03:05] [Server thread/INFO]: player_18 joined the game
+[17:03:05] [Server thread/INFO]: Set spawn point to -164, 300, 9 [0.0] in minecraft:overworld for player_18
+[17:03:05] [Server thread/INFO]: player_18 was killed
+[17:03:05] [Server thread/INFO]: Killed player_18
+[17:03:15] [Server thread/INFO]: player_19[/[0:0:0:0:0:0:0:1]:49220] logged in with entity id 1395 at (-5.5, 96.0, -3.5)
+[17:03:15] [Server thread/INFO]: player_19 joined the game
+[17:03:16] [Server thread/INFO]: Set spawn point to -117, 300, 1 [0.0] in minecraft:overworld for player_19
+[17:03:16] [Server thread/INFO]: player_19 was killed
+[17:03:16] [Server thread/INFO]: Killed player_19
+[17:03:26] [Server thread/INFO]: player_20[/[0:0:0:0:0:0:0:1]:49222] logged in with entity id 1439 at (5.5, 92.0, 6.5)
+[17:03:26] [Server thread/INFO]: player_20 joined the game
+[17:03:27] [Server thread/INFO]: Set spawn point to 28, 300, 13 [0.0] in minecraft:overworld for player_20
+[17:03:27] [Server thread/INFO]: player_20 was killed
+[17:03:27] [Server thread/INFO]: Killed player_20
+[17:03:37] [Server thread/INFO]: player_21[/[0:0:0:0:0:0:0:1]:49225] logged in with entity id 1487 at (6.5, 96.0, -4.5)
+[17:03:37] [Server thread/INFO]: player_21 joined the game
+[17:03:37] [Server thread/INFO]: Set spawn point to 69, 300, 64 [0.0] in minecraft:overworld for player_21
+[17:03:37] [Server thread/INFO]: player_21 was killed
+[17:03:37] [Server thread/INFO]: Killed player_21
+[17:03:48] [Server thread/INFO]: player_22[/[0:0:0:0:0:0:0:1]:49228] logged in with entity id 1543 at (1.5, 96.0, 0.5)
+[17:03:48] [Server thread/INFO]: player_22 joined the game
+[17:03:48] [Server thread/INFO]: Set spawn point to -68, 300, -10 [0.0] in minecraft:overworld for player_22
+[17:03:48] [Server thread/INFO]: player_22 was killed
+[17:03:48] [Server thread/INFO]: Killed player_22
+[17:03:48] [Server thread/WARN]: player_22 moved too quickly! -69.0,204.10000000000002,-10.0
+[17:03:58] [Server thread/INFO]: player_23[/[0:0:0:0:0:0:0:1]:49238] logged in with entity id 1586 at (1.5, 95.0, 2.5)
+[17:03:58] [Server thread/INFO]: player_23 joined the game
+[17:03:59] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_23
+[17:03:59] [Server thread/INFO]: player_23 was killed
+[17:03:59] [Server thread/INFO]: Killed player_23
+[17:03:59] [Server thread/WARN]: player_23 moved too quickly! 31.0,205.10000000000002,59.0
+[17:04:09] [Server thread/INFO]: player_24[/[0:0:0:0:0:0:0:1]:49249] logged in with entity id 1623 at (5.5, 87.0, 10.5)
+[17:04:09] [Server thread/INFO]: player_24 joined the game
+[17:04:09] [Server thread/INFO]: Set spawn point to -42, 300, -176 [0.0] in minecraft:overworld for player_24
+[17:04:10] [Server thread/INFO]: player_24 was killed
+[17:04:10] [Server thread/INFO]: Killed player_24
+[17:04:10] [Server thread/WARN]: player_24 moved too quickly! -47.0,213.10000000000002,-186.0
+[17:04:20] [Server thread/INFO]: player_25[/[0:0:0:0:0:0:0:1]:49260] logged in with entity id 1737 at (-9.5, 91.0, 8.5)
+[17:04:20] [Server thread/INFO]: player_25 joined the game
+[17:04:20] [Server thread/INFO]: Set spawn point to 116, 300, -63 [0.0] in minecraft:overworld for player_25
+[17:04:20] [Server thread/INFO]: player_25 was killed
+[17:04:20] [Server thread/INFO]: Killed player_25
+[17:04:20] [Server thread/WARN]: player_25 moved too quickly! 126.0,209.10000000000002,-71.0
+[17:04:30] [Server thread/INFO]: player_26[/[0:0:0:0:0:0:0:1]:49269] logged in with entity id 1837 at (-7.5, 95.0, 1.5)
+[17:04:30] [Server thread/INFO]: player_26 joined the game
+[17:04:31] [Server thread/INFO]: Set spawn point to -38, 300, -53 [0.0] in minecraft:overworld for player_26
+[17:04:31] [Server thread/INFO]: player_26 was killed
+[17:04:31] [Server thread/INFO]: Killed player_26
+[17:04:31] [Server thread/WARN]: player_26 moved too quickly! -30.0,205.10000000000002,-54.0
+[17:04:41] [Server thread/INFO]: player_27[/[0:0:0:0:0:0:0:1]:49279] logged in with entity id 1882 at (-3.5, 88.0, 10.5)
+[17:04:41] [Server thread/INFO]: player_27 joined the game
+[17:04:41] [Server thread/INFO]: Set spawn point to 32, 300, 61 [0.0] in minecraft:overworld for player_27
+[17:04:42] [Server thread/INFO]: player_27 was killed
+[17:04:42] [Server thread/INFO]: Killed player_27
+[17:04:42] [Server thread/WARN]: player_27 moved too quickly! 36.0,212.10000000000002,51.0
+[17:04:52] [Server thread/INFO]: player_28[/[0:0:0:0:0:0:0:1]:49289] logged in with entity id 1926 at (6.5, 90.0, 7.5)
+[17:04:52] [Server thread/INFO]: player_28 joined the game
+[17:04:52] [Server thread/INFO]: Set spawn point to 27, 300, 47 [0.0] in minecraft:overworld for player_28
+[17:04:52] [Server thread/INFO]: player_28 was killed
+[17:04:52] [Server thread/INFO]: Killed player_28
+[17:04:52] [Server thread/WARN]: player_28 moved too quickly! 21.0,210.10000000000002,40.0
+[17:05:02] [Server thread/INFO]: player_29[/[0:0:0:0:0:0:0:1]:49306] logged in with entity id 1987 at (1.5, 87.0, 10.5)
+[17:05:02] [Server thread/INFO]: player_29 joined the game
+[17:05:03] [Server thread/INFO]: Set spawn point to -95, 300, 46 [0.0] in minecraft:overworld for player_29
+[17:05:03] [Server thread/INFO]: player_29 was killed
+[17:05:03] [Server thread/INFO]: Killed player_29

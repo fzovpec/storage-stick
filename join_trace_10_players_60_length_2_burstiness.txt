@@ -1,0 +1,11 @@
+0 player_join player_9 
+0 player_join player_8 
+12.0 player_join player_7 
+12.0 player_join player_6 
+24.0 player_join player_5 
+24.0 player_join player_4 
+36.0 player_join player_3 
+36.0 player_join player_2 
+48.0 player_join player_1 
+48.0 player_join player_0 
+90.0 wait empty 
