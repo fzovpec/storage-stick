@@ -1,4 +1,5 @@
 const mineflayer = require('mineflayer');
+const Item = require('prismarine-item')('1.20.1')
 const pathfinder = require('mineflayer-pathfinder').pathfinder
 const Movements = require('mineflayer-pathfinder').Movements
 const { GoalXZ } = require('mineflayer-pathfinder').goals
@@ -101,6 +102,35 @@ async function move(player_name, args){
     bot.pathfinder.setGoal(new GoalXZ(x, z));
 }
 
+async function placeBlock(player_name, args){
+    const bot = players[player_name];
+
+    let [itemId, x, y, z, xFaceAgainst, yFaceAgainst, zFaceAgainst] = args;
+    itemId = Number(itemId);
+    if(!bot){
+        console.log(`error finding a player with nickname ${player_name}`);
+        return
+    }
+    // in args we gonna need coordinates, block id, and placed against id
+    const item = new Item(itemId, 1)
+    const inventorySlot = 36;
+    console.log(item);
+
+    bot.creative.clearInventory().then(() => {
+        bot.creative.setInventorySlot(inventorySlot, item).then(() => {
+            const inventoryItem = bot.inventory.findInventoryItem(itemId, null);
+
+            bot.equip(inventoryItem, 'hand').then(() => {
+                var targetBlock = bot.blockAt(Vec3(x, y, z));
+                bot.placeBlock(targetBlock, new Vec3(0, 1, 0)).then(() => {
+                    console.log('success');
+                });
+            });
+        });
+    });
+
+}
+
 function handleCommand(action, playerName, args) {
     switch (action) {
         case 'login':
@@ -113,6 +143,7 @@ function handleCommand(action, playerName, args) {
             move(playerName, args);
             break;
         case 'place_block':
+            placeBlock(playerName, args);
             break;
         default:
             console.log(`Unknown action: ${action}`);

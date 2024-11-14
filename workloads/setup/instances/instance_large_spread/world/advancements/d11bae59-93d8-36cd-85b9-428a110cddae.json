@@ -1,4 +1,16 @@
 {
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-11-13 16:43:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:taiga": "2024-11-13 16:43:40 +0100"
+    },
+    "done": false
+  },
   "minecraft:recipes/redstone/birch_button": {
     "criteria": {
       "has_planks": "2024-11-13 16:53:15 +0100"
@@ -23,12 +35,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crafting_table": {
-    "criteria": {
-      "unlock_right_away": "2024-11-13 16:43:39 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/stick": {
     "criteria": {
       "has_planks": "2024-11-13 16:53:15 +0100"
@@ -46,12 +52,6 @@
       "has_planks": "2024-11-13 16:53:15 +0100"
     },
     "done": true
-  },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:taiga": "2024-11-13 16:43:40 +0100"
-    },
-    "done": false
   },
   "minecraft:recipes/decorations/barrel": {
     "criteria": {

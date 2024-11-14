@@ -40,5 +40,7 @@ with open(args.Input, 'r') as f:
             player_emulation.sendline(f'remove_block {argument}')
         elif action == 'move':
             player_emulation.sendline(f'move {argument}')
+        elif action == 'place_block':
+            player_emulation.sendline(f'place_block {argument}')
 
         line = f.readline()
