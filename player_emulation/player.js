@@ -35,13 +35,8 @@ async function login(player_name){
     console.log('start time');
     
     bot.once("spawn", () => {
-        // This is called
-        console.log("Spawned");
-        
         bot.waitForChunksToLoad().then(() => {
-          // This is not called
             const endTime = Date.now();
-
             fs.appendFileSync(logFilePath, `${player_name} ${endTime - startTime}\n`, 'utf8');
         });
     });
@@ -100,6 +95,25 @@ async function move(player_name, args){
     const defaultMove = new Movements(bot);
     bot.pathfinder.setMovements(defaultMove);
     bot.pathfinder.setGoal(new GoalXZ(x, z));
+
+    return new Promise((resolve, reject) => {
+        bot.once('goal_reached', () => {
+            console.log('Bot has reached the goal!');
+            resolve();
+        });
+
+        bot.once('path_update', (r) => {
+            if (r.status === 'noPath') {
+                console.log('No path to goal');
+                reject(new Error('No path to goal'));
+            }
+        });
+
+        bot.once('pathfinder_error', (error) => {
+            console.error('Pathfinder error:', error);
+            reject(error);
+        });
+    });
 }
 
 async function placeBlock(player_name, args){
@@ -107,6 +121,7 @@ async function placeBlock(player_name, args){
 
     let [itemId, x, y, z, xFaceAgainst, yFaceAgainst, zFaceAgainst] = args;
     itemId = Number(itemId);
+
     if(!bot){
         console.log(`error finding a player with nickname ${player_name}`);
         return
@@ -114,7 +129,6 @@ async function placeBlock(player_name, args){
     // in args we gonna need coordinates, block id, and placed against id
     const item = new Item(itemId, 1)
     const inventorySlot = 36;
-    console.log(item);
 
     bot.creative.clearInventory().then(() => {
         bot.creative.setInventorySlot(inventorySlot, item).then(() => {
@@ -131,6 +145,61 @@ async function placeBlock(player_name, args){
 
 }
 
+function calc_distance(pos1, pos2){
+    const { x: x1, y: y1, z: z1 } = pos1;
+    const { x: x2, y: y2, z: z2 } = pos2;
+
+    return Math.sqrt( 
+        Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2) + Math.pow((z1 - z2), 2)
+    )
+}
+
+async function attackEntity(player_name, args){
+    const bot = players[player_name];
+    const [entityType] = args;
+
+    if(!bot){
+        console.log(`error finding a player with nickname ${player_name}`);
+        return;
+    }
+
+    const entity = bot.nearestEntity(entity => entity.name.toLowerCase() === entityType);
+    if(!entity){
+        console.log('requested entity was not found');
+        return;
+    }
+
+    while(calc_distance(entity.position, bot.entity.position) > 2){
+        const { x, y, z } = entity.position;
+        await move(player_name, [x, z]);
+    }
+
+    bot.attack(entity);
+}
+
+async function attackPlayer(player_name, args){
+    const bot = players[player_name];
+    const [attackedPlayerName] = args;
+
+    if(!bot){
+        console.log(`error finding a player with nickname ${player_name}`);
+        return;
+    }
+    
+    const entity = bot.nearestEntity(entity => entity.type === 'player' && entity.username.toLowerCase() === attackedPlayerName.toLowerCase());
+    if(!entity){
+        console.log('requested entity was not found');
+        return;
+    }
+
+    while(calc_distance(entity.position, bot.entity.position) > 2){
+        const { x, y, z } = entity.position;
+        await move(player_name, [x, z]);
+    }
+
+    bot.attack(entity);
+}
+
 function handleCommand(action, playerName, args) {
     switch (action) {
         case 'login':
@@ -144,6 +213,12 @@ function handleCommand(action, playerName, args) {
             break;
         case 'place_block':
             placeBlock(playerName, args);
+            break;
+        case 'attack_entity':
+            attackEntity(playerName, args);
+            break;
+        case 'attack_player':
+            attackPlayer(playerName, args);
             break;
         default:
             console.log(`Unknown action: ${action}`);

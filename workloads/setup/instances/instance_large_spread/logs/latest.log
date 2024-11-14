@@ -1,78 +1,61 @@
-[12:00:38] [Server thread/INFO]: gleb4 lost connection: Disconnected
-[12:00:38] [Server thread/INFO]: gleb4 left the game
-[12:03:35] [Server thread/INFO]: gleb4[/127.0.0.1:51424] logged in with entity id 30196 at (6.794579332574667, 75.79845979988565, -6.055578680800509)
-[12:03:35] [Server thread/INFO]: gleb4 joined the game
-[12:10:43] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51564] logged in with entity id 31399 at (5.5, 74.0, -8.5)
-[12:10:43] [Server thread/INFO]: ht joined the game
-[12:11:45] [Server thread/INFO]: ht lost connection: Disconnected
-[12:11:45] [Server thread/INFO]: ht left the game
-[12:13:03] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51579] logged in with entity id 31702 at (5.5, 74.0, -8.5)
-[12:13:03] [Server thread/INFO]: ht joined the game
-[12:13:16] [Server thread/INFO]: ht lost connection: Disconnected
-[12:13:16] [Server thread/INFO]: ht left the game
-[12:13:35] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51587] logged in with entity id 31768 at (5.5, 74.0, -8.5)
-[12:13:35] [Server thread/INFO]: ht joined the game
-[12:13:44] [Server thread/INFO]: ht lost connection: Disconnected
-[12:13:44] [Server thread/INFO]: ht left the game
-[12:15:00] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51592] logged in with entity id 31962 at (5.5, 74.0, -8.5)
-[12:15:00] [Server thread/INFO]: ht joined the game
-[12:15:29] [Server thread/INFO]: ht lost connection: Disconnected
-[12:15:29] [Server thread/INFO]: ht left the game
-[12:15:33] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51613] logged in with entity id 32054 at (5.5, 74.0, -8.5)
-[12:15:33] [Server thread/INFO]: ht joined the game
-[12:15:49] [Server thread/INFO]: ht lost connection: Disconnected
-[12:15:49] [Server thread/INFO]: ht left the game
-[12:16:24] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51621] logged in with entity id 32160 at (5.5, 74.0, -8.5)
-[12:16:24] [Server thread/INFO]: ht joined the game
-[12:16:55] [Server thread/INFO]: ht lost connection: Disconnected
-[12:16:55] [Server thread/INFO]: ht left the game
-[12:16:57] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51633] logged in with entity id 32238 at (5.5, 74.0, -8.5)
-[12:16:57] [Server thread/INFO]: ht joined the game
-[12:17:09] [Server thread/INFO]: ht lost connection: Disconnected
-[12:17:09] [Server thread/INFO]: ht left the game
-[12:17:48] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51639] logged in with entity id 32363 at (5.5, 74.0, -8.5)
-[12:17:48] [Server thread/INFO]: ht joined the game
-[12:19:07] [Server thread/INFO]: ht lost connection: Disconnected
-[12:19:07] [Server thread/INFO]: ht left the game
-[12:19:11] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51643] logged in with entity id 32663 at (5.5, 74.0, -8.5)
-[12:19:11] [Server thread/INFO]: ht joined the game
-[12:21:14] [Server thread/INFO]: ht lost connection: Disconnected
-[12:21:14] [Server thread/INFO]: ht left the game
-[12:21:22] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51677] logged in with entity id 32963 at (5.5, 74.0, -8.5)
-[12:21:22] [Server thread/INFO]: ht joined the game
-[12:21:36] [Server thread/INFO]: ht lost connection: Disconnected
-[12:21:36] [Server thread/INFO]: ht left the game
-[12:23:50] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51741] logged in with entity id 33311 at (5.5, 74.0, -8.5)
-[12:23:51] [Server thread/INFO]: ht joined the game
-[12:24:03] [Server thread/INFO]: ht lost connection: Disconnected
-[12:24:03] [Server thread/INFO]: ht left the game
-[12:28:57] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51841] logged in with entity id 33990 at (5.5, 74.0, -8.5)
-[12:28:57] [Server thread/INFO]: ht joined the game
-[12:34:24] [Server thread/INFO]: ht lost connection: Disconnected
-[12:34:24] [Server thread/INFO]: ht left the game
-[12:34:33] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:51987] logged in with entity id 34810 at (3.5, 72.0, -2.5)
-[12:34:33] [Server thread/INFO]: ht joined the game
-[12:36:04] [Server thread/INFO]: ht lost connection: Disconnected
-[12:36:04] [Server thread/INFO]: ht left the game
-[12:36:20] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:52045] logged in with entity id 35015 at (3.5, 72.0, -2.5)
-[12:36:20] [Server thread/INFO]: ht joined the game
-[12:37:04] [Server thread/INFO]: ht lost connection: Disconnected
-[12:37:04] [Server thread/INFO]: ht left the game
-[12:37:15] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:52084] logged in with entity id 35112 at (3.5, 72.0, -2.5)
-[12:37:15] [Server thread/INFO]: ht joined the game
-[12:38:46] [Server thread/INFO]: ht lost connection: Disconnected
-[12:38:46] [Server thread/INFO]: ht left the game
-[12:39:01] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:52154] logged in with entity id 35348 at (3.5, 72.0, -2.5)
-[12:39:01] [Server thread/INFO]: ht joined the game
-[12:39:16] [Server thread/INFO]: ht lost connection: Disconnected
-[12:39:16] [Server thread/INFO]: ht left the game
-[12:39:28] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:52172] logged in with entity id 35410 at (3.5, 72.0, -2.5)
-[12:39:28] [Server thread/INFO]: ht joined the game
-[12:39:35] [Server thread/INFO]: ht lost connection: Disconnected
-[12:39:35] [Server thread/INFO]: ht left the game
-[12:48:16] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:52482] logged in with entity id 36872 at (3.5, 72.0, -2.5)
-[12:48:16] [Server thread/INFO]: ht joined the game
-[12:48:50] [Server thread/INFO]: ht lost connection: Disconnected
-[12:48:50] [Server thread/INFO]: ht left the game
-[12:49:03] [Server thread/INFO]: ht[/[0:0:0:0:0:0:0:1]:52493] logged in with entity id 36967 at (3.5, 72.0, -2.5)
-[12:49:03] [Server thread/INFO]: ht joined the game
+[13:55:15] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13:55:16] [ServerMain/INFO]: Loaded 7 recipes
+[13:55:16] [ServerMain/INFO]: Loaded 1271 advancements
+[13:55:17] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[13:55:17] [Server thread/INFO]: Loading properties
+[13:55:17] [Server thread/INFO]: Default game type: SURVIVAL
+[13:55:17] [Server thread/INFO]: Generating keypair
+[13:55:17] [Server thread/INFO]: Starting Minecraft server on *:25565
+[13:55:17] [Server thread/INFO]: Using default channel type
+[13:55:17] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[13:55:17] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[13:55:17] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[13:55:17] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[13:55:17] [Server thread/INFO]: Preparing level "world"
+[13:55:18] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[13:55:20] [Worker-Main-5/INFO]: Preparing spawn area: 0%
+[13:55:20] [Worker-Main-4/INFO]: Preparing spawn area: 0%
+[13:55:20] [Worker-Main-9/INFO]: Preparing spawn area: 0%
+[13:55:20] [Worker-Main-6/INFO]: Preparing spawn area: 0%
+[13:55:20] [Server thread/INFO]: Time elapsed: 1980 ms
+[13:55:20] [Server thread/INFO]: Done (3.067s)! For help, type "help"
+[13:55:42] [Server thread/INFO]: gleb4[/127.0.0.1:55209] logged in with entity id 169 at (2.3896144107383823, 72.0, -6.369660061857661)
+[13:55:42] [Server thread/INFO]: gleb4 joined the game
+[13:55:48] [Server thread/INFO]: mv[/[0:0:0:0:0:0:0:1]:55215] logged in with entity id 221 at (0.5, 74.0, -17.566272960759854)
+[13:55:48] [Server thread/INFO]: mv joined the game
+[13:55:56] [Server thread/INFO]: aa[/[0:0:0:0:0:0:0:1]:55223] logged in with entity id 253 at (1.5, 72.0, -4.5)
+[13:55:56] [Server thread/INFO]: aa joined the game
+[14:03:22] [Server thread/INFO]: mv lost connection: Disconnected
+[14:03:22] [Server thread/INFO]: mv left the game
+[14:03:22] [Server thread/INFO]: aa lost connection: Disconnected
+[14:03:22] [Server thread/INFO]: aa left the game
+[14:03:29] [Server thread/INFO]: mv[/[0:0:0:0:0:0:0:1]:55436] logged in with entity id 1216 at (0.5, 74.0, -17.566272960759854)
+[14:03:29] [Server thread/INFO]: mv joined the game
+[14:03:31] [Server thread/INFO]: aa[/[0:0:0:0:0:0:0:1]:55440] logged in with entity id 1236 at (1.3816213507090485, 71.0, -2.436183188429688)
+[14:03:31] [Server thread/INFO]: aa joined the game
+[14:03:46] [Server thread/INFO]: mv lost connection: Disconnected
+[14:03:46] [Server thread/INFO]: mv left the game
+[14:03:46] [Server thread/INFO]: aa lost connection: Disconnected
+[14:03:46] [Server thread/INFO]: aa left the game
+[14:04:19] [Server thread/INFO]: mv[/[0:0:0:0:0:0:0:1]:55463] logged in with entity id 1352 at (1.3189211087859074, 72.0, -2.575993320434324)
+[14:04:19] [Server thread/INFO]: mv joined the game
+[14:04:22] [Server thread/INFO]: aa[/[0:0:0:0:0:0:0:1]:55465] logged in with entity id 1360 at (1.3816213507090485, 71.0, -2.436183188429688)
+[14:04:22] [Server thread/INFO]: aa joined the game
+[14:07:32] [Server thread/INFO]: [Not Secure] <aa> cannot dig
+[14:07:49] [Server thread/INFO]: [Not Secure] <aa> starting to dig dirt
+[14:07:55] [Server thread/INFO]: aa was slain by Spider
+[14:08:05] [Server thread/INFO]: mv lost connection: Disconnected
+[14:08:05] [Server thread/INFO]: mv left the game
+[14:08:05] [Server thread/INFO]: aa lost connection: Disconnected
+[14:08:05] [Server thread/INFO]: aa left the game
+[14:08:09] [Server thread/INFO]: aa[/[0:0:0:0:0:0:0:1]:55568] logged in with entity id 2057 at (9.45773928187622, 78.0, -3.3)
+[14:08:09] [Server thread/INFO]: aa joined the game
+[14:08:28] [Server thread/INFO]: aa lost connection: You logged in from another location
+[14:08:28] [Server thread/INFO]: aa left the game
+[14:08:28] [Server thread/WARN]: handleDisconnection() called twice
+[14:08:28] [Server thread/INFO]: aa[/[0:0:0:0:0:0:0:1]:55579] logged in with entity id 2095 at (9.45773928187622, 78.0, -3.3)
+[14:08:28] [Server thread/INFO]: aa joined the game
+[14:09:35] [Server thread/INFO]: [Not Secure] <aa> starting to dig spruce_leaves
+[14:09:46] [Server thread/INFO]: aa was slain by Spider
+[14:10:13] [Server thread/INFO]: aa lost connection: Disconnected
+[14:10:13] [Server thread/INFO]: aa left the game
